@@ -1,0 +1,1 @@
+ALTER TABLE application.applications_info ALTER COLUMN plt_description TYPE text USING plt_description::text;

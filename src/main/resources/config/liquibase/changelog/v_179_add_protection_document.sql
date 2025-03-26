@@ -1,0 +1,2 @@
+ALTER TABLE application.protection_elements ADD column if not exists document_id int8 NULL;
+ALTER TABLE application.protection_elements ADD CONSTRAINT protection_document_fk FOREIGN KEY (document_id) REFERENCES application.documents(id);

@@ -1,0 +1,13 @@
+package gov.saip.applicationservice.common.enums;
+
+public enum ApplicationTypeEnum {
+    IPRS_AUTHENTICATION_AND_AUTHORIZATION,
+    IPRS_PATENT,
+    IPRS_INDUSTRIAL_DESIGN,
+    IPRS_PLANT_VARIETIES,
+    IPRS_INTEGRATED_CIRCUITS,
+    IPRS_TRADEMARK,
+    IPRS_GEOGRAPHICAL_INDICATION,
+    IPRS_COPYRIGHT
+
+}

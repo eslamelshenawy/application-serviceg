@@ -1,0 +1,6 @@
+ALTER TABLE application.plant_varieties_details RENAME COLUMN margeking_in_ksa to marketing_in_ksa;
+ALTER TABLE application.plant_varieties_details RENAME COLUMN margeking_in_ksa_note to marketing_in_ksa_note;
+ALTER TABLE application.plant_varieties_details RENAME COLUMN margeking_out_ksa to marketing_out_ksa;
+ALTER TABLE application.plant_varieties_details RENAME COLUMN margeking_out_ksa_note to marketing_out_ksa_note;
+
+

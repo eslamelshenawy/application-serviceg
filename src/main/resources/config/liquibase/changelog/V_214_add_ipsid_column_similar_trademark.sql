@@ -1,0 +1,1 @@
+ALTER TABLE application.similar_trademark ADD ips_id int8;

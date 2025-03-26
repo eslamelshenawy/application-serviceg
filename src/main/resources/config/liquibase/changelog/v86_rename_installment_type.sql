@@ -1,0 +1,2 @@
+update application.application_installments_config set installment_type = 'RENEWAL' where installment_type = 'INSTALLMENT';
+update application.application_installments set installment_type = 'RENEWAL' where installment_type = 'INSTALLMENT';

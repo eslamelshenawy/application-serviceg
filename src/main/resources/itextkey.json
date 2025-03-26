@@ -1,0 +1,246 @@
+[
+  {
+    "product": "itext-core",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 8,
+      "minor": 0
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "N0qFgALbjXUzyiH30sdP0re9bgF1TJg1WV5B5JFrIemcS542SWu8O2dLuyDNG5hKtXIo6ADJWG42Huzy6RCpmYQOZL4iJV0Zf46cAG73jKRTINzKS+TxJM4/Iv46ip9+C1lTDo9nO1y/EkxpMM9L3dc06f+w16k73WHTc6+48JY+wKncpb50smcMRkb33qyEuietF4Kif8mZm8Lg/nughL6O2GbNRDuPKGVMSqa/GCOEfCGV6j1dnAWU+q8hQHSYOGFormCYwnshPDF7FteYyzWsJQKBSnEWezogOFf3nkw/bvsal9h/dBqxWL9jg2awtEB3AxuZM50iG4HHXK1RfedVUKr5Cpecu3oOFZ0EYXDhoWByu70HGb0/Yw17wPn3FCZU6DEMlBrlwT5YaXxnXjdZuYlpeUQAZiT9ZQhGQUsZt3hXs4/rvuLCxfs+nhcBrYLMGGwfypSoeaY7d5r5mmk8gvdiO9NcKwtl03BK1xjGTv0tLZc/buafCY7FGujU4Gk7wTeJgDrxzj2KFIX1tJpuXb9c3lMDvE0Qp/aE2zy0RCJZ9o8+SYs3YXVfHEmysGWKfMtldgBDE6hTrOw8t9sEizJ0CHQBjBRBT3jTwWtNX2vX8nG8A5p/xZJYn0pzc/Eyhp1Z1P1rh++vPe3l63P6dT3G+d85q7poSV60UPA="
+  },
+  {
+    "product": "pdfXfa",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 4
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "RYpBrVUVEMktZ5yDRB4tGflqTp0HsLQqLnvIenPmOVglWTIG2ziOCJkNDavNdB/ToS5T1Ul4LHCnix85gf0ipsrsBq5tzmLIt7Tc/m/etkR/hp7blRN0YpVryStZG4f56iOjD7cg7olturiyYLo+viLYHCM61Lm5mYUfZLGs/nq9J2nr9fr4NRkoK/zD1i2WWRt3brzGgVjkDpctEEB+PyBnVjf+9ojUV6Xw+JWFOSsoBBpcsWUIzL0dEq4zKuPgEjXUesLpslFxkGslcioW1dkl8fBruCLym9J0IhM8QdaQbUAcmnjdg7vr5o7ZMAhoKr9SSCbZHBfsO026LajKq0xpS2y15LpNPAIekN/5Gl7QO2LgTmqmVABE+ZJzjUHVz5X8j7adqetK74rjJxcGLlFH6mV0rG/imaNcqlGWj/NRVsTeYqz4KmQVTbF+/NxVrCyMmoWfnwUh1GndAHSkgCAHR2sK4cR5KPjIcRxH22mWAaIdgQarfdJMBxpssGM/HDK3J6szt3vIEcXL+wSPispaRVCiVos7MKcJkuMa687j6VUUMKGp/3/a2IXbPYj01H7VdSB+7WCEzPWnegGaALxwSyyRFEnj9iisv9DL+zg+QVl44kx4YkGgxaNmk3pVgPSlAIh0S0VEfGL602/bKIjAJT/VMufMxgPP0YTti04="
+  },
+  {
+    "product": "pdfSweep",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 4
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "WFCc4pGamkpoznC8Y1rAYEhgp5FIadywo9Nyvc9FWMv581Alm8Y75igWIJxbg0Pwq3tYplKNw/XTW/2pwKST/R3kgrG3uW2wEicpzMpIb5RJd5cKKtaKxeb/+Skcx1ZBKN9mLoBgLt9aNkTz2y2EDUY/MOgxP1sCZt0YWvSzIRFWUPDMarvZZqoukHqOKTC8FRvfVQQN/mCckPE4XSzl7QXUUAye10R2fp7AZ6j2o0Rf+58cfbI5gLo4pYqX+cAVVN/RyW/hC2xUoA0W/OLE6G6UyniX0jd2JgPsmYYgvEfoyVfqUx31uca9Aqkv4eL1Ep/CyA7pjqt6LrHw0umokVAxODSNZK+Qe34lnM0AEkjwKZfqddlsDYy2ypk2l2htlG0Zf5LJlzr12FfOJk4gEzlt4VfTWG/98mooQ2MwLyZoYb5XtT6WQBMYaaH8aaVuZu36znQIOVenpn4d7ij3CYuHkr7/qzXdjAHyxesSbqx8wIYzHjEFVI8U6n4L33+efYYc0Df3Vg5qsSWV4LCnkMiqdhajUmmJFqj1T3kns2mBvS7hyrs7Jrt5Cq7rQTZRDZSV6k7ASUc7YPfoO+77Sg5e75LzBEiwzdng0wjKrACNJ2bEQRn9YNM/mnIvMqcRBnICDtJhnrfOq2Kt5yoJClDYot7SRS14G0yoSPjkUzs="
+  },
+  {
+    "product": "pdfRender",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 2
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "gE/5hQ098SVo/pgbxmZQz41uNUNq9u14rRCOwSnaR7b+sWH2iPfxSRTdQS48HK2nOplYSQyzy2dAqj2yv32FBEwZ5763zgDpP5IfuHP35hV/y6OXU0ZtUnO1S0JrGAq39dhm9wggAu6RG9qcVVXbwoCsEaLp9ApRKsgEYwHm1gTzvlMMeYS7Vt9/K2apA1/wfgs/ust4qIKMSS8f6PcyISI7scy61/7INvBl8txCO9aUJq4zD0sit10FxaTGACtAaZVIsW9bBIQNog5XRdYXcH4hCFY/Vofribpc5Znuh8wKxrVMQXexinfAy3Ec19hiO6LWWJeHdJMzYCldLLKbSKIhLYvOAYcwyO/JIOoSV92W31CyCuieaU4GKIfEQsBijFU/ZHpRK+/Xmw/XN1OAVK0MZNSK7OEmjS02rGZTFHjfE1bPvjrZLzaVPiaSKJye1psy3VNEExzmF1KeckPZzydTM4ZUDMTDanNoo6SmaTH3XfD7LAurMFn5Z7Bn0WTTGrw+saSjH6sJ7xNygnF1OVAxlcE7/1rymLwQHP3WRFJEQ0LtFU13IKuO4gNx6i4GaksuhJrjXsOnidPLcOYjcAqLEVcVILKmkbFCYyGPuOKlWFeOpBCWTD1tdqLAePhjjJuoHoGiJrKHqPmze9qg1FTJFxyXakxIMLfEh9n4xvo="
+  },
+  {
+    "product": "pdfOcr-tesseract4",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 3
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "GtHzzNqMDL0BVUDba5fIsKoe5of1Gh2Xkncuwm9fa8CNE3cUaCqHf4CrNSJng2mX2lm/SN0A7K/ES90ASPX9QEPqNksvheY5W7kpRJll4zPMHbfpePNu/Y2YFSI2gYY+SWRDp//P88nIKzLrOvqAXeyEavqkdDPfa4tdj2CbrYsrmoJbS0evqdKeG3IBUv4u853s+9wD21TJa2BH27sOAX4hi6XZP96JnezutrYWZ5vA/KUyGADPZQybztq9dbrtstuR8SPXEQAlJKad/Sa3nwYd2whaDtTKLloLIkqw0MNsp31BvVgzIkoywhLVaFIigDsbBWe2zweLPQj3Kupn0KbraAPYNJxgzBLnsHPVJ8r6s9YsUWiMSOLSdeAKWaF64RynGPN6g9jNTLNvxlDNzLzuJ9TREio1p+0M+WjiZkKGn6LP7Jf2wF6TUuYW6gz7FaZdzIAi0eyvD5fpUgylAPKxVNIzk9mxgDueNN86hqbsvQvNzOvtctusHbf7a5vnaNyAhmE3rwMs35lpQjwYkvGauKMmHreo4/kf9jOTN6cn3DT8iuVNFIO7Xl0Wfp1o2WMtZ6aRWKtZLL0RBhL8dweC49Ee7+i3vv6vR5+J7nY3S4eSRAZopZzWVxDPV09qnolnT11Us/3Kka8gVBmNsdatHJXu+p51xQshYNEKgrU="
+  },
+  {
+    "product": "pdfOptimizer",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 3
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "Rdhl+0fCq2gHyXZ+V3XBFUiKejcEZJ0PdLwFfDivzHcicjVzmZr6vXTMnlPBnLFbC7blH8KF7UQRlD1FS1wxuNBVN24eIjOiV6j9wUmNuQIqiOvSCPjzyfYBfFzJAQiHhkf9eJJdaT3hKmRIoHiJtJfKNeAY88DYOZ05F2Ze6IR8GFnkXC+G9sfE9Ei13hjF4SR4b+6/y9ITcA29B0/wXyi/aGM3AVH/QXgZKuzpoyzOLU4aoGrd2pE8kQoR+C/nbrIKon1/VrTE+34MrHVKN7qMEgiR/CoTct4qrC5G4qTMdYJVhpsBJcVrXto0db5+42kyR88O372W2mqvOiB7KBsmvWoocWilDvhxjxc9YvfAiCLvjXn94OLoivQjiVta7UAbVhAeG25EXziAXEQGHqF2mfobiXyiSp6ZPPDJi/Mz2ACV1LkjmKZrPORz2XdgmZFUNEJonKY3zWA9WYe4lJFdL9VbPxYB9BSyEQAhwgJWuM8UAdpQVbjCVZJ+KR3+BGLsiCkapAMcstg40UjfNbSbSByEiFsD53TFxTa/eF6kvtFR7+LSH96Cb0BUk/ghl1MR1fr2176xr9K+p5VsykefLqFbNXzq1Q6akOnU77ERQDwW0DVO4me6S12WAJkYFYSJ4JPeGkWohkytZtV1l2X43gG3leuJrOylj4shMiw="
+  },
+  {
+    "product": "pdfHtml",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 5
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "X+XWInUOXCn4DklizIDspR1T5rC1T91QFLH61GcA2V0sUQmXX32WYdeFaN7XD9+qetMtVgqQvlhiYA8i4Aq/re4UdoqklHNIRdOAjyvOkKNEIFTaqW/EFIAUBjCcNKZRg233t87b8ERwSC4Ja3pzcsqbGaTGy3jejMUoQmBjeywPpROngLKfHQBoKAm+Fdng7c61SFCmTQqJ2DYZFhrNjfemtHlxJVDCxGT6lxzDFXu6UXU65XgPbTqx26uPKxeW3S3tu+osa/w9XPXLAbefQpKkhMRozvFhOOeqYSRgjW/Q+ptbc14dzH8az2JOwfpNDabMdQj+BMukm34h3SNBwxogLpwDDAgFFOfIXJiO5yWeSqByaKA4oukN0hDdfU9iZ1CA6Xw5CeZCV4djFXXy5ROo2ec/u/ts+JxkrE4MHNI2duVGVu/roaT5w7hMImSuAg4uFWZbvPywNB/0vhhFUAjxsvZoENghRbkz2KJOF6HFIEwEJA+dmaeCqAVXtXFb0U53cQRpgGcm6MsXyPFBfkaNJMQPA9mRe3Lp58VdeBdPxnY2Z4TxR206YXX+Xl4mdfxGnt/ZTTjJzmpFq2B3a8FIttqbTSiOdGjFzEg0J+I0kdLtaIWMZRIZBSRQ07wk3eN7mjfyuI9orryrNSfwYtTWBYKu3Z/P1DsGHq77Lfw="
+  },
+  {
+    "product": "pdfCalligraph",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 4
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "OxmA+/r4ZRwMnBQ3k6vAC1vx4vodcUa3q8ls36hlX918+GEaIF0/Pw49hfepaxpCM3Thx2vtk7pYWkLg126HJ2Bajg3rHV8wXtuChl0GKnZT6uiwNdGu0XAs8VgHpaeotU2UrsCo0WCrRBVDXkwrKf2LwPGGKpMtw7/LRjIYhK/M4NgcpnSNtOqNfGpU7j+hMpfA9i47HpDgBgg6aMBiBcAGzAbRl1FHFjzVHH5eiKOSkItiOVzgDyg7hIvG0UUzQW50O2rFILWvTKuoDvUU3ZsA+9q4IXmVcR1wMgo1rADH5UxHihBMZHynnS1AwHSR1W29nuQRaRfJFXEI50NbRCAJ/0SPoX0fwmo5+YTTkViO8C2Mjvga1tTb4WSJ8iO4jDU/aaX4IWwtRQmk4LUzaTKAEN49eVLZYxKn4Outl2eUbIRugjW6oZbOZPgTPQVOFEXCREOGx1EmgMJDexmoX2a8MJOkyLzGd3JdLR0CIShQqEO0KrS1XA8s7yP8bbtXbIz6sbuYKH5JmmNAW/vl0y+bJU2dVROTOg33uZw8GSDbSJx439jjPWW/rk76cajbPHdrM6TWi+iY+jvVPZBIAq+ikw9YbAnxbMAwwklXxfQSBCrcXvdqj0hQyNj+Y9QMjmzM0thTnw4Yzf7PfcwC5zDJeQquCa4E4mlubZ1ASSI="
+  },
+  {
+    "product": "pdfOffice",
+    "licensee": {
+      "company": "abc",
+      "name": "Sereana Conery",
+      "email": "icl236@gmail.com"
+    },
+    "key": "1cac197e1a61c68945c79db878a0b5039db6354d2368762b94a3560b26df73ac",
+    "creationDate": "2023-07-09",
+    "expirationDate": "2023-08-08",
+    "onExpiration": "grace",
+    "gracePeriod": "1d0h0m",
+    "platform": "any",
+    "licenseType": "trial",
+    "productVersion": {
+      "major": 2
+    },
+    "limits": {
+      "default": {
+        "limitType": "unlimited",
+        "sendEvents": false
+      }
+    },
+    "licenseVersion": "1.0.0",
+    "sendStatistics": "disabled",
+    "signature": "QUnMuuF3FPZdE53BKf8o4sao2rc/V/a0iTEwqLstAZYW0AiLLovU0P8MsARO6puqVAWbR+e8M4uaEo0dUdrYeIALqvOPHZHZeNihQ6RGLYwUqzt3XtpiTPZ+Dt/32uydTSktbI2tkKIAtdbwubP7jPelIvclNMs8BnUJMbSwBuhorxFOp50qGu2HX3FbnFjXCSoOTsHcLfA76v4OX/+TAn4o2sKYK9RSpSvAdWI/58Mog5f/yaGOqbHmu9GXIAnNXinRZf6tVz/aKAtIVcYvT6FSWY9RQea3uwJBCsTyBld+/tdx+oBb+GbCzKnw33Y60l7EB30eLJkMrK6ufsQA12ZGDvGef8LIPngBsJKKHJSJ9neJhOWSisJ4BbnigTRNMxhvonyU8/B52+sc4jXZzKo8cbMyuOqvfHADo/htHNrgetM/3mOVDl/RnsbF5pCwCMjsAhTeAPc+a1u+836pOQtVwECs6d/4q4h81e5geai06AoM4fvK75jgFvaaakcra06oHIGnU/fay/EU2Y9foxA1JpbCvP2hyxM//SttqQCyzOPnCQCk+PoDFZRGlcOccOW21fM11m94ymF5dEDR2J/2UNek6Q31II8pdbpdRPOG0TcpaEXyyF/b19oHB7zvnzf+WvX6xzzexFP7HAtAKcQtDkwqI4OAr7cHPf4+hv0="
+  }
+]

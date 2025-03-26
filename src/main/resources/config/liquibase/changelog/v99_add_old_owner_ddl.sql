@@ -1,0 +1,1 @@
+ALTER TABLE application.change_ownership_request ADD old_owner_id int8 NULL;

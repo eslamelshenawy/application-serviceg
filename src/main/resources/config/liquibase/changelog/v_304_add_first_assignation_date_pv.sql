@@ -1,0 +1,1 @@
+alter table application.plant_varieties_details add column if not exists first_assignation_date timestamp;

@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: 'test-user'
+    password: '123'
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate.enable_lazy_load_no_trans: true
+
+redis.host: localhost
+redis.port: 7777
+redis.username: ""
+redis.password: ""
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: TRACE

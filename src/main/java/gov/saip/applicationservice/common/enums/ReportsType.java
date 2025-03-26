@@ -1,0 +1,17 @@
+package gov.saip.applicationservice.common.enums;
+
+public enum ReportsType {
+    CHECKER, EXAMINER, ObjectionRequestReport, DroppedRequestReport, NoticeOfFormalCheckerReport, EXAMINER_REPORT_1, EXAMINER_REPORT_2,DroppedRequestReportSubstantive,
+    PetitionRecoveryConditionalRejection, PetitionRecoveryAcceptance, PetitionRecoveryRejection, IssueCertificate, RejectionPetitionRequestNationalStage,
+    AcceptancePetitionRequestNationalStage, ConditionalRejectionPetitionRequestNationalStage, SecondNoticeOfFormalCheckerReport,
+
+    PriorityPetitionRequestAcceptance, PriorityPetitionRequestRejection, PriorityPetitionRequestConditionalRejection, PriorityPetitionRequestExpiryRejection,
+
+    PriorityModifyRequestAcceptance, PriorityModifyRequestRejection, PriorityModifyRequestConditionalRejection, PriorityModifyRequestExpiryRejection,
+    NoticeOfFormalCheckerReportIndusterial,SecondNoticeOfFormalCheckerReportIndusterial,ObjectionRequestReportIndusterial,grantIndusterial,
+    grantIC, FirstFormalCheckerCorrectionReportIC, SecondFormalCheckerCorrectionReportIC, RejectionRequestReportIC, RejectionCheckerRequestReportIC,
+    FirstFormalCheckerCorrectionReportPV,SecondFormalCheckerCorrectionReportPV,ObjectionRequestReportPV,DroppedRequestReportPV, GrantObjectionRequestReportPV,
+    DroppedRequestReportPublicationA,DroppedRequestReport_For_Timing_Checker,ObjectionRequestReportChecker,DroppedRequestReportPublicationB,DroppedRequestReportForExaminerBill
+    ;
+
+}

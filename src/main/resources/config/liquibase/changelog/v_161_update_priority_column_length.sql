@@ -1,0 +1,1 @@
+ALTER TABLE application.application_notes ALTER COLUMN priority_id TYPE int8 USING priority_id::int8;

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+
+</head>
+
+<body>
+
+
+
+<style type="text/css">
+    @font-face {
+        font-family: "bukra";
+        src: url('fonts/29ltbukraregular.ttf');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "bukra";
+        src: url('fonts/29ltbukrabold.ttf');
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    * {
+        box-sizing: border-box;
+
+        clear: both;
+    }
+
+    body {
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative !important;
+        direction: rtl;
+        background: #fff;
+        font: normal 13px/20px bukra, sans-serif;
+        color: #323232;
+        padding: 0 15px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        font-family: 'bukra', sans-serif;
+        line-height: normal;
+    }
+
+    .f11 {
+        font-size: 11px !important;
+    }
+
+    .f12 {
+        font-size: 12px !important;
+    }
+
+    .f13 {
+        font-size: 12px !important;
+    }
+
+    .f14 {
+        font-size: 14px !important;
+    }
+
+    .f16 {
+        font-size: 16px !important;
+    }
+
+    .f24 {
+        font-size: 24px !important;
+    }
+
+    .mb1 {
+        margin-bottom: 10px;
+    }
+
+    .mb2 {
+        margin-bottom: 20px;
+    }
+
+    .mb3 {
+        margin-bottom: 30px;
+    }
+
+    .mb4 {
+        margin-bottom: 40px;
+    }
+
+    .mb5 {
+        margin-bottom: 50px;
+    }
+
+    .w50 {
+        width: 50%;
+    }
+
+    .w33 {
+        width: 33.333333%;
+    }
+
+    .w25 {
+        width: 25%;
+    }
+
+    .texcolor {
+        color: #007070;
+    }
+
+    .patent td,
+    th {
+        border: 1px solid #111;
+    }
+
+    .noborder {
+        border: 0 !important;
+    }
+
+    .patent {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .patent tbody tr:nth-child(even) {
+        background-color: #f6f6f6;
+    }
+
+    .table tr th,
+    .table tr td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+
+
+
+    .ftitlebold {
+        font-weight: 200;
+        padding-inline-start: 5px;
+        padding-inline-end: 5px;
+        font-size: medium;
+    }
+
+    .ftitlebold2 {
+        font-weight: 200;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: medium;
+    }
+
+    .fdatabold {
+        font-weight: 300;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: medium;
+    }
+
+    .cover {
+        margin: 0 auto;
+        max-width: 692px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 0;
+        text-align: center;
+    }
+
+    .cover-img img {
+        width: 100%;
+    }
+
+    .cover-content {
+        position: absolute;
+        top: 150px;
+        left: 60px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .cover-content h1 {
+        color: #007070;
+        font-size: 28px;
+    }
+
+    .cover-content h2 {
+        color: #007070;
+        font-size: 24px;
+    }
+
+    .patname span {
+        color: #007070;
+        font-size: 14px;
+        line-height: 24px;
+        display: block;
+    }
+
+    .patdate span {
+        font-size: 12px;
+    }
+
+    .patdescription {
+        color: #007070;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .texcolor {
+        color: #007070;
+    }
+
+
+    .patdetails {
+        clear: both;
+        float: right;
+    }
+
+    .patdetails.w50,
+    .patdetails.w33,
+    .patdetails.w25 {
+        float: right;
+        padding-left: 15px;
+        clear: initial;
+    }
+
+    .patdetails.w50:nth-child(even),
+    .patdetails.w33:nth-child(even),
+    .patdetails.w25:nth-child(even) {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .patdetails h4 {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .patdetails p {
+        margin-bottom: 15px;
+    }
+
+    .pattitle {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        text-decoration: underline;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+
+
+    .pat-img {
+        clear: both;
+        text-align: center;
+    }
+
+    .pat-img img {
+        max-width: 100%;
+    }
+
+    .pat-img.w50,
+    .pat-img.w33,
+    .pat-img.w25 {
+        float: right;
+        padding-left: 15px;
+        clear: initial;
+    }
+
+    .pat-img.w50:nth-child(even),
+    .pat-img.w33:nth-child(even),
+    .pat-img.w25:nth-child(even) {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .bg-color {
+        background: #696969;
+        color: #fff;
+    }
+
+    .bg-color2 {
+        background: #c0c0c0;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .text-left {
+        text-align: left !important;
+    }
+
+    .underline {
+        text-decoration: underline !important;
+    }
+
+    .text-right {
+        text-align: right !important;
+    }
+
+    .patlist ul {
+        display: inline-block;
+    }
+
+    .patlist h4 {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .patlist span {
+        font-weight: 600;
+        color: #007070;
+    }
+
+    .patlist p {
+        margin-bottom: 15px;
+    }
+
+    .patlist img {
+        float: left;
+        max-width: 150px;
+    }
+
+    .cover-date {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+    }
+
+    .cover-date ul {
+        list-style: none;
+        text-align: right;
+        font-size: 14px;
+        padding: 0 15px;
+        line-height: 24px;
+    }
+
+    .cover-date ul span {
+        list-style: none;
+        font-weight: 600;
+        color: #007070;
+    }
+
+    .tm-cover {
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 0;
+        text-align: center;
+    }
+
+    .tm-cover-img img {
+        width: 100%;
+    }
+
+    .tm-cover-content {
+        position: absolute;
+        top: 150px;
+        left: 60px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .tm-cover-content h1 {
+        color: #007070;
+        font-size: 28px;
+    }
+
+    .tm-cover-content h2 {
+        color: #007070;
+        font-size: 24px;
+    }
+    .tm-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+    }
+
+    .tm-content .tm-logo {
+        position: absolute;
+        top: 36px;
+        left: 36px;
+        right: auto;
+        z-index: 9;
+        width: 162px;
+    }
+    .tm-content p {
+        position: absolute;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 0;
+        z-index: 9;
+        text-align: right;
+        padding: 0 10px;
+    }
+    .tm-content p.reg-num {
+        top: 115px;
+        left: auto;
+        right: 120px;
+        width: 155px;
+    }
+
+    .tm-content p.tm-class {
+        top: 151px;
+        left: auto;
+        right: 68px;
+        width: 80px;
+    }
+    .tm-content p.reg-date {
+        top: 151px;
+        left: auto;
+        right: 240px;
+        width: 130px;
+    }
+    .tm-content p.protection-start {
+        top: 151px;
+        left: auto;
+        right: 445px;
+        width: 140px;
+    }
+    .tm-content p.protection-end {
+        top: 151px;
+        left: auto;
+        right: 660px;
+        width: 130px;
+    }
+    .tm-content p.priority-num {
+        top: 174px;
+        left: auto;
+        right: 97px;
+        width: 275px;
+    }
+    .tm-content p.priority-date {
+        top: 174px;
+        left: auto;
+        right: 450px;
+        width: 135px;
+    }
+    .tm-content p.priority-country {
+        top: 174px;
+        left: auto;
+        right: 652px;
+        width: 145px;
+    }
+    .tm-content p.vienna {
+        top: 200px;
+        left: auto;
+        right: 130px;
+        width: 665px;
+    }
+    .tm-content p.tm-description {
+        top: 250px;
+        left: 36px;
+        right: 36px;
+        padding-right: 70px;
+    }
+    .tm-content p.tm-conditions {
+        top: 347px;
+        left: auto;
+        right: 445px;
+        width: 518px;
+    }
+    .tm-content p.tm-owner {
+        top: 372px;
+        left: 36px;
+        right: 36px;
+        padding-right: 60px;
+    }
+    .tm-content p.address {
+        top: 421px;
+        left: 36px;
+        right: 36px;
+        padding-right: 40px;
+    }
+    .tm-content p.nationality {
+        top: 471px;
+        left: auto;
+        right: 640px;
+        width: 325px;
+    }
+    .tm-content p.products {
+        top: 495px;
+        left: 36px;
+        right: 36px;
+        padding-right: 160px;
+    }
+
+    .tm-content p.reg-num2 {
+        top: 117px;
+        left: auto;
+        right: 120px;
+        width: 155px;
+    }
+    .tm-content p.protection-start2 {
+        top: 88px;
+        left: auto;
+        right: 132px;
+        width: 140px;
+    }
+    .tm-content p.tm-description2 {
+        top: 153px;
+        left: 36px;
+        right: 36px;
+        padding-right: 120px;
+    }
+    .tm-content p.release-date {
+        top: 90px;
+        left: auto;
+        right: 145px;
+        width: 155px;
+    }
+
+</style>
+
+
+<div class="tm-cover">
+    <div class="tm-cover-img">
+        <img src="https://fileintegration.saip.gov.sa/previewFile/2613f140-905a-4125-b38b-94da815aa8d1/IPRs4Patent/"
+             alt="cover">
+    </div>
+    <div class="tm-content">
+        <img class="tm-logo" th:src="@{${tmImage}}" alt="">
+
+        <p class="release-date"><span th:text="${certificateDateHijri}"></span></p>
+        <p class="reg-num"><span th:text="${applicationNumber}"></span></p>
+        <p class="tm-class"><span th:text="${classification}"></span></p>
+        <p class="reg-date"><span th:text="${regDate}"></span></p>
+        <p class="protection-start"><span th:text="${grantDateStartHigri}"></span></p>
+        <p class="protection-end"><span th:text="${grantDateEndHigri}"></span></p>
+
+        <p class="priority-num">&nbsp;<span th:text="${priorityNumber}"></span></p>
+        <p class="priority-date">&nbsp;<span th:text="${priorityDate}"></span></p>
+        <p class="priority-country">&nbsp;<span th:text="${priorityCountry}"></span></p>
+
+        <p class="vienna"><span th:text="${vennaCodes}"></span></p>
+        <p class="tm-description"><span th:text="${tradeMarkDesc}"></span></p>
+        <p class="tm-conditions"><span th:text="${tmAcceptConditionDesc}"></span></p>
+        <p class="tm-owner"><span th:text="${applicantNameAr}"></span></p>
+        <p class="address"><span th:text="${address}"></span></p>
+        <p class="nationality"><span th:text="${nationality}"></span></p>
+        <p class="products"><span th:text="${firstPart}"></span></p>
+
+    </div>
+</div>
+
+<th:block th:if="${additionalPageRequired}">
+    <th:block th:each="remText : ${remainingTextList}">
+        <div class="tm-cover">
+            <div class="tm-cover-img">
+                <img src="https://fileintegration.saip.gov.sa/previewFile/bb15aec6-c811-4cb1-8797-1249c86d7571/IPRs4Patent/"
+                     alt="cover">
+            </div>
+            <div class="tm-content">
+                <p class="reg-num2"><span th:text="${applicationNumber}"></span></p>
+                <p class="protection-start2"><span th:text="${certificateDateHijri}"></span></p>
+                <p class="tm-description2"><span th:text="${remText}"></span></p>
+            </div>
+        </div>
+    </th:block>
+</th:block>
+
+</body>
+</html>

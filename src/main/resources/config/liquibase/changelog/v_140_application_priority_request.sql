@@ -1,0 +1,1 @@
+ALTER TABLE application.application_priority_request ADD is_request_updated boolean DEFAULT false;

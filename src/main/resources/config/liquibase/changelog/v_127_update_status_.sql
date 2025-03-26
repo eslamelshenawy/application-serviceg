@@ -1,0 +1,3 @@
+UPDATE application.lk_application_status
+SET created_by_user=NULL, created_date=NULL, modified_by_user=NULL, modified_date=NULL, is_deleted=0, ips_status_desc_ar='تم النشر إلكترونياً', ips_status_desc_en='Published Electronically', code='PUBLISHED_ELECTRONICALLY', ips_status_desc_ar_external='نشر قبول تسجيل العلامة التجارية  ', ips_status_desc_en_external='Publication of acceptance of trademark registration'
+WHERE id=15;

@@ -1,0 +1,2 @@
+ALTER table application.lk_pv_excellence_traits
+add column is_active BOOLEAN

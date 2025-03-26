@@ -1,0 +1,13 @@
+alter table application.change_ownership_request add column agency_request_number varchar(255);
+alter table application.change_ownership_request add column applicant_type varchar(255);
+alter table application.change_ownership_request add column notes TEXT;
+create table application.change_ownership_request_documents (change_ownership_request_id int8 not null, document_id int8 not null);
+create table application.change_ownership_request_licenses_waive_documents (change_ownership_request_id int8 not null, document_id int8 not null);
+
+alter table application.change_ownership_request_documents add constraint UKmflgpqat6a4p9x9ui53jgfr3t unique (change_ownership_request_id, document_id);
+alter table application.change_ownership_request_licenses_waive_documents add constraint UKi4qywyt22od5ubwmabjfpsc52 unique (change_ownership_request_id, document_id);
+
+alter table application.change_ownership_request_documents add constraint FKtmmpcjapgnfv7s39qhf188ofg foreign key (document_id) references application.documents;
+alter table application.change_ownership_request_documents add constraint FKhgxuuebxghkp6riioe8ksquvt foreign key (change_ownership_request_id) references application.change_ownership_request;
+alter table application.change_ownership_request_licenses_waive_documents add constraint FK841soediofxgxfha4a14wnbem foreign key (document_id) references application.documents;
+alter table application.change_ownership_request_licenses_waive_documents add constraint FKhpjt0gon3vqtamwverxxwjyjf foreign key (change_ownership_request_id) references application.change_ownership_request;

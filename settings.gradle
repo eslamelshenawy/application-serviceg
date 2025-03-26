@@ -1,0 +1,17 @@
+pluginManagement {
+    plugins {
+    }
+    resolutionStrategy {
+    }
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven {
+            url uri('https://repo.spring.io/milestone')
+        }
+        maven {
+            url uri('https://repo.maven.apache.org/maven2/')
+        }
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'application-service'

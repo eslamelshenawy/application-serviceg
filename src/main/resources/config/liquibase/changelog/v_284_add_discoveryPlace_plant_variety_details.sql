@@ -1,0 +1,1 @@
+ALTER TABLE application.plant_varieties_details  ADD COLUMN IF NOT EXISTS discovery_place VARCHAR(255);

@@ -1,0 +1,2 @@
+ALTER TABLE application.integrated_circuits DROP CONSTRAINT if exists fkshdcq4olhohvv5dejmm0cmmvi;
+ALTER TABLE application.integrated_circuits DROP COLUMN if exists commercial_exploitation_document_id;

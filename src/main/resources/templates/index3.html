@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+    
+</head><!--/head-->
+
+<body>
+
+
+  <style type="text/css">
+    @font-face {
+      font-family: "bukra";
+      src: url('src\main\resources\fonts/29ltbukraregular.ttf');
+      font-weight: 400;
+      font-display: swap;
+      font-style: normal;
+    }
+  
+    @font-face {
+      font-family: "bukra";
+      src: url('src\main\resources\fonts/29ltbukrabold.ttf');
+      font-weight: 600;
+      font-display: swap;
+      font-style: normal;
+    }
+  
+    * {
+      box-sizing: border-box;
+      clear: both;
+    }
+  
+    body {
+      box-sizing: border-box;
+      margin: 0 auto;
+      position: relative !important;
+      direction: rtl;
+      background: #fff;
+      font: normal 13px/20px bukra, sans-serif;
+      color: #323232;
+      padding: 0 15px;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 600;
+      font-family: 'bukra', sans-serif;
+      line-height: normal;
+    }
+  
+    .f11 {
+      font-size: 11px !important;
+    }
+  
+    .f12 {
+      font-size: 12px !important;
+    }
+  
+    .f13 {
+      font-size: 12px !important;
+    }
+  
+    .f14 {
+      font-size: 14px !important;
+    }
+  
+    .f16 {
+      font-size: 16px !important;
+    }
+  
+    .f24 {
+      font-size: 24px !important;
+    }
+  
+    .mb1 {
+      margin-bottom: 10px;
+    }
+  
+    .mb2 {
+      margin-bottom: 20px;
+    }
+  
+    .mb3 {
+      margin-bottom: 30px;
+    }
+  
+    .mb4 {
+      margin-bottom: 40px;
+    }
+  
+    .mb5 {
+      margin-bottom: 50px;
+    }
+  
+    .w50 {
+      width: 50%;
+    }
+  
+    .w33 {
+      width: 33.333333%;
+    }
+  
+    .w25 {
+      width: 25%;
+    }
+  
+    .texcolor {
+      color: #007070;
+    }
+  
+    .patent td,
+    th {
+      border: 1px solid #111;
+    }
+  
+    .noborder {
+      border: 0 !important;
+    }
+  
+    .patent {
+      border-collapse: collapse;
+      width: 100%;
+    }
+  
+    .patent tbody tr:nth-child(even) {
+      background-color: #f6f6f6;
+    }
+  
+    .table tr th,
+    .table tr td {
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: top;
+    }
+  
+  
+  
+    .ftitlebold {
+      font-weight: 200;
+      padding-inline-start: 5px;
+      padding-inline-end: 5px;
+      font-size: medium;
+    }
+  
+    .ftitlebold2 {
+      font-weight: 200;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      font-size: medium;
+    }
+  
+    .fdatabold {
+      font-weight: 300;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      font-size: medium;
+    }
+  
+    .cover {
+      margin: 0 auto;
+      max-width: 692px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 0;
+      text-align: center;
+    }
+  
+    .cover-img img {
+      width: 100%;
+    }
+  
+    .cover-content {
+      position: absolute;
+      top: 150px;
+      left: 60px;
+      right: 60px;
+      z-index: 9;
+    }
+  
+    .cover-content h1 {
+      color: #007070;
+      font-size: 28px;
+    }
+  
+    .cover-content h2 {
+      color: #007070;
+      font-size: 24px;
+    }
+  
+    .patname span {
+      color: #007070;
+      font-size: 14px;
+      line-height: 24px;
+      display: block;
+    }
+  
+    .patdate span {
+      font-size: 12px;
+    }
+  
+    .patdescription {
+      color: #007070;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  
+    .texcolor {
+      color: #007070;
+    }
+  
+  
+    .patdetails {
+      clear: both;
+      float: right;
+    }
+  
+    .patdetails.w50,
+    .patdetails.w33,
+    .patdetails.w25 {
+      float: right;
+      padding-left: 15px;
+      clear: initial;
+    }
+  
+    .patdetails.w50:nth-child(even),
+    .patdetails.w33:nth-child(even),
+    .patdetails.w25:nth-child(even) {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+  
+    .patdetails h4 {
+      color: #007070;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  
+    .patdetails p {
+      margin-bottom: 15px;
+    }
+  
+    .pattitle {
+      color: #007070;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-decoration: underline;
+      font-size: 18px;
+      text-align: center;
+    }
+  
+  
+  
+  
+    .pat-img {
+      clear: both;
+      text-align: center;
+    }
+  
+    .pat-img img {
+      max-width: 100%;
+    }
+  
+    .pat-img.w50,
+    .pat-img.w33,
+    .pat-img.w25 {
+      float: right;
+      padding-left: 15px;
+      clear: initial;
+    }
+  
+    .pat-img.w50:nth-child(even),
+    .pat-img.w33:nth-child(even),
+    .pat-img.w25:nth-child(even) {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+  
+    .bg-color {
+      background: #696969;
+      color: #fff;
+    }
+  
+    .bg-color2 {
+      background: #c0c0c0;
+      color: #000;
+      font-weight: 600;
+    }
+  
+    .text-center {
+      text-align: center !important;
+    }
+  
+    .text-left {
+      text-align: left !important;
+    }
+  
+    .underline {
+      text-decoration: underline !important;
+    }
+  
+    .text-right {
+      text-align: right !important;
+    }
+  
+    .patlist ul {
+      display: inline-block;
+    }
+  
+    .patlist h4 {
+      color: #007070;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+  
+    .patlist span {
+      font-weight: 600;
+      color: #007070;
+    }
+  
+    .patlist p {
+      margin-bottom: 15px;
+    }
+  
+    .patlist img {
+      float: left;
+      max-width: 150px;
+    }
+  
+    .cover-date {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      width: 170px;
+    }
+  
+    .cover-date ul {
+      list-style: none;
+      text-align: right;
+      font-size: 14px;
+      padding: 0;
+      line-height: 24px;
+    }
+  
+    .cover-date ul span {
+      list-style: none;
+      font-weight: 600;
+      color: #007070;
+    }
+
+    .t_list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      text-align: right;
+      padding: 10px 0 0 0;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      position: relative;
+      margin-top: -1px;
+    }
+    .t_list::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      background: #333;
+      top: 0;
+      bottom: 0;
+      left: 51%;
+    }
+    .t_list li {
+        padding: 5px;
+        flex: 1 0 50%;
+    }
+    ul.t_list span {
+      list-style: none;
+      font-weight: 600;
+      color: #007070;
+    }
+    .mt-0 {
+      margin-top: 0 !important;
+    }
+  </style>
+
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="imgs/cover.jpg" alt="cover">                 
+  </div>
+  <div class="cover-content">
+    <h1>براءة الاختراع</h1>
+    <p class="f11 mb4">البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة  أو إمكانية  استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+
+    <p class="patname mb3">
+      <span>سوميتومو شي اف دبليو انيرجيا او واي</span>
+      <span>SUMITOMO SHI FW ENERGIA OY</span>
+    </p>
+    <p class="patnumber">براءة الاختراع رقم : SA12911</p>
+    <p class="patdate">
+      <span>بتاريخ 24/10/1444ه</span>
+      <span>الموافق 14/05/2023م</span>
+    </p>
+
+    <h4>عن الاختراع المسمى</h4>
+    <p class="patdescription">البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة البراءة حق وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة</p>
+    <p class="f12">البراءة حق استئثاري يمنح نظير اختراع حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة</p>
+  </div>
+</div>
+
+
+
+
+<div dir="rtl">
+  <table class="table patent">
+    <thead>
+      <tr>
+        <th colspan="2" class="w33">الهيئة السعودية للملكية الفكرية</th>
+        <th colspan="2" rowspan="2" class="w33"><span class="texcolor f24">براءة اختراع</span></th>
+        <th colspan="2" class="w33">تاريخ المنح : 24/10/ه</th>
+      </tr>
+      <tr>
+        <th colspan="2">رقم البراءة: SA12911 B1</th>
+        <th colspan="2">الموافق : 14/05/2023م</th>
+      </tr>
+    </thead>
+  </table> 
+  
+  <ul class="t_list">
+    <li><span>رقم الطلب:</span> 20505</li>
+    <li><span> نوع الطلب:</span> 20505</li>
+    <li><span> تاريخ الايداع:</span> 20505</li>
+    <li><span> مقدم الطلب:</span> 20505</li>
+    <li><span> الوكيل:</span> 20505</li>
+    <li><span> الى:</span> 20505</li>
+    <li><span> عدد الاشكال:</span> 6</li>
+    <li><span> نوع المنتج:</span> ورق تغليف مقوى</li>
+    <li><span> التصنيف:</span> LOC (12) Cl . 9-03</li>
+  </ul>
+
+</div>
+    
+    
+
+<div dir="rtl">
+
+  <div class="patdetails w50">
+    <h4>اسم الاختراع</h4>
+    <p> البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div>
+
+  <div class="patdetails w50">
+    <h4>اسم الاختراع</h4>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div> 
+  
+  <div class="patdetails w50">
+    <h4>اسم الاختراع</h4>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div> 
+
+  <div class="patdetails w50">
+    <h4>اسم الاختراع</h4>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div> 
+
+  <div class="patdetails w50">
+    <h4>اسم الاختراع</h4>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div> 
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div dir="rtl">
+
+  <h1 class="pattitle">الوصف الكامل</h1>
+
+  <div class="patdetails">
+    <h4>اسم الاختراع</h4>
+    <p> البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div>
+
+  <div class="patdetails">
+    <h4>اسم الاختراع</h4>
+    <p> البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div>
+
+  <div class="patdetails">
+    <h4>اسم الاختراع</h4>
+    <p> البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div>
+
+  <div class="patdetails">
+    <h4>اسم الاختراع</h4>
+    <p> البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div>
+
+  <div class="patdetails">
+    <h4>اسم الاختراع</h4>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+    <p>البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+  </div> 
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div dir="rtl">
+
+  <div class="pat-img w50">
+    <img src="imgs/pat1.jpg" alt="cover">                 
+  </div>
+
+  <div class="pat-img w50">
+    <img src="imgs/pat1.jpg" alt="cover">                 
+  </div>
+
+  <div class="pat-img w50">
+    <img src="imgs/pat1.jpg" alt="cover">                 
+  </div>
+
+  <div class="pat-img w50">
+    <img src="imgs/pat1.jpg" alt="cover">                 
+  </div>
+
+  <div class="pat-img w50">
+    <img src="imgs/pat1.jpg" alt="cover">                 
+  </div>
+
+</div>
+    
+
+
+
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="imgs/cover-end.jpg" alt="cover">                 
+  </div>
+  <div class="cover-content">
+    <h2>مدة سريان هذه البراءة عشرون سنة من تاريخ إيداع الطلب</h2>
+    <p class="f11 mb5">وذلك بشرط تسديد المقابل المالي السنوي للبراءة وعدم بطلانها او سقوطها لمخالفتها لاي من احكام نظام براءات الاختراع والتصميمات التخطيطية للدارات المتكاملة والاصناف النباتية والنماذج الصناعية او لائحته التنفيذية.</p>
+
+    <h3>صادرة عن</h3>
+    <h3>الهيئة السعودية للملكية الفكرية</h3>
+    <p>ص ب 6531 , الرياض 13321 , المملكة العربية السعودية</p>
+    <p class="patdescription">SAIP@SAIP.GOV.SA</p>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

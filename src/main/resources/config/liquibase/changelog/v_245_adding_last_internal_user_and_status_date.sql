@@ -1,0 +1,2 @@
+alter table application.applications_info add column if not exists last_internal_user_name varchar(255);
+ alter table application.applications_info add column if not exists last_status_modified_date timestamp;

@@ -1,0 +1,6 @@
+INSERT INTO application.lk_document_type (id,created_by_user,created_date,modified_by_user,modified_date,is_deleted,category,description,doc_order,name,name_ar,code) VALUES
+    ((select (max(id) + 1) from application.lk_document_type),NULL,NULL,NULL,NULL,0,'APPLICATION','إشعاراسقاط الطلب',NULL,'DroppedRequestReportPublicationA','إشعار اسقاط الطلب','DroppedRequestReportPublicationA');
+INSERT INTO application.lk_document_type (id,created_by_user,created_date,modified_by_user,modified_date,is_deleted,category,description,doc_order,name,name_ar,code) VALUES
+    ((select (max(id) + 1) from application.lk_document_type),NULL,NULL,NULL,NULL,0,'APPLICATION','إشعار رفض الطلب للفحص الموضوعي',NULL,'DroppedRequestReportSubstantive','إشعار رفض الطلب للفحص الموضوعي','DroppedRequestReportSubstantive');
+INSERT INTO application.lk_document_type (id,created_by_user,created_date,modified_by_user,modified_date,is_deleted,category,description,doc_order,name,name_ar,code) VALUES
+    ((select (max(id) + 1) from application.lk_document_type),NULL,NULL,NULL,NULL,0,'APPLICATION','إشعار رفض الطلب للفحص الشكلي',NULL,'ObjectionRequestReportChecker','إشعار رفض الطلب للفحص الشكلي','ObjectionRequestReportChecker');

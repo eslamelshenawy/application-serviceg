@@ -1,0 +1,1 @@
+ALTER TABLE application.revoke_licence_request ADD old_owner_id int8 NULL;

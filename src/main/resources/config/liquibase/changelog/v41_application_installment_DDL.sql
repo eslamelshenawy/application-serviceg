@@ -1,0 +1,8 @@
+--liquibase formatted sql
+-- changeset application-service:v41_application_installment_DDL.sql
+
+create table application.application_installment_notifications (id int8 not null, created_by_user varchar(255), created_date timestamp, modified_by_user varchar(255), modified_date timestamp, is_deleted int4 not null, last_notification boolean, notification_status varchar(255), notification_type varchar(255), application_installment_id int8, document_id int8, primary key (id));
+create table application.application_installments (id int8 not null, created_by_user varchar(255), created_date timestamp, modified_by_user varchar(255), modified_date timestamp, is_deleted int4 not null, amount numeric(19, 2), end_due_date date, installment_status varchar(255), installment_type varchar(255), last_due_date date, payment_date timestamp, penalty_amount numeric(19, 2), postponed_reason varchar(255), start_due_date date, application_id int8, primary key (id));
+alter table application.application_installment_notifications add constraint FKc5bpt2hkvr6si7v47tjwj33lk foreign key (application_installment_id) references application.application_installments;
+alter table application.application_installment_notifications add constraint FKl4tjmfpb6s084lr2oau0mlsqb foreign key (document_id) references application.documents;
+alter table application.application_installments add constraint FKaour7xi5hood7yfj2vr5fhrjy foreign key (application_id) references application.applications_info;

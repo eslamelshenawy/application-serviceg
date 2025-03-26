@@ -1,0 +1,1 @@
+alter table application.trademark_agency_requests  add column returned_request_num int4 not null default 0;

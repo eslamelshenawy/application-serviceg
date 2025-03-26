@@ -1,0 +1,2 @@
+INSERT INTO application.lk_support_services (id,created_by_user,created_date,modified_by_user,modified_date, is_deleted, cost,desc_ar, desc_en,name_ar,name_en,code)
+VALUES((select (max(id) + 1) from application.lk_support_services), null,null,null,null, 0, 0,'طلب الاعتراض على شطب ترخيص', 'Opposition Revoke Licence Request', 'طلب الاعتراض على شطب ترخيص', 'Opposition Revoke Licence Request','OPPOSITION_REVOKE_LICENCE_REQUEST');

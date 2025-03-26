@@ -1,0 +1,193 @@
+server:
+  port: 9090
+spring:
+#  profiles:
+#    active: local
+  application:
+    name: application-service
+
+  artemis:
+    mode: native
+    user: ${ACTIVEMQ_USER1}
+    password: ${ACTIVEMQ_USER1_PASSWORD}
+    broker-url: tcp://${ACTIVEMQ_IP_ADDRESS}:${ACTIVEMQ_AMQP_PORT}
+  redis:
+    ssl: false
+    host: ${REDIS_HOSTNAME}
+    port: ${REDIS_PORT}
+    username: ${REDIS_USERNAME}
+    password: ${REDIS_PASSWORD}
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format:
+          sql: 'true'
+        default_schema: application
+    hibernate:
+      ddl-auto: validate
+    show-sql: 'false'
+  liquibase:
+    change-log: classpath:config/liquibase/changelog.yaml
+    database-change-log-lock-table: application_databasechangeloglock
+
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 5000
+      max-lifetime: 500
+    password: ${SAIP_IPRIGHTS_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    username: ${SAIP_IPRIGHTS_DB_USER}
+    url: jdbc:postgresql://${SAIP_IPRIGHTS_DB_HOST}:5432/${SAIP_IPRIGHTS_DB_NAME}
+nuxeo:
+  base-url: https://fileintegration.saip.gov.sa
+  upload:
+    url: ${nuxeo.base-url}/uploadAsFile/
+  download:
+    url: ${nuxeo.base-url}/download/
+  preview:
+    url: ${nuxeo.base-url}/previewFile/
+link:
+  portal: https://eservices.saip.gov.sa/
+  publication : https://ipgazette.saip.gov.sa/
+  contactus : https://www.saip.gov.sa/contact-us/
+
+soap:
+  translation:
+    url: http://gp-iprights-soap-translation-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+
+
+client:
+  feign:
+    e-filing-bpm: http://gp-iprights-e-filing-bpm-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    notification: http://gp-iprights-notification-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    customer: http://gp-iprights-customer-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    user.manage: http://gp-iprights-user-administration-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    application: http://gp-iprights-application-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    payment: http://gp-iprights-payment-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    patent: http://gp-iprights-patent-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    industrial: http://gp-iprights-industrial-design-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    suspicion:  http://gp-iprights-suspicion-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    dashboard:  http://gp-iprights-dashboard-reports-service.clusterlocal.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa:9090
+    ipsearch: http://gp-ipsearch-api-examiner.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa/api/v1/external/
+
+redis.host: ${REDIS_HOSTNAME}
+redis.port: ${REDIS_PORT}
+redis.username: ${REDIS_USER}
+redis.password: ${REDIS_PASSWORD}
+
+cors:
+  allowedOrigins:
+    - 'http://gp-iprights-app-container-se-frontend.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa'
+    - 'http://gp-iprights-app-container-frontend.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa'
+    - 'http://app.local.iprs.saip.gov.sa:3000'
+    - 'http://admin.app.local.iprs.saip.gov.sa:4000'
+    - 'http://services-gateway.local.iprs.saip.gov.sa'
+    - 'http://gp-iprights-services-gateway-site-frontend.${CLUSTER_ENVIRONMENT}.internal.saip.gov.sa'
+    - 'https://eservices.saip.gov.sa'
+    - 'https://examiner-eservices.saip.gov.sa'
+    - 'https://ipgazette.saip.gov.sa'
+    - 'https://trademarks-frontend-eservices.saip.gov.sa'
+    - 'https://trademarks-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://patents-frontend-eservices.saip.gov.sa'
+    - 'https://patents-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://designs-frontend-eservices.saip.gov.sa'
+    - 'https://designs-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://assistive-services-frontend-eservices.saip.gov.sa'
+    - 'https://assistive-services-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://customer-code-frontend-eservices.saip.gov.sa'
+    - 'https://customer-code-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://eqm-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://publishment-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://settings-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://tahaqaq-frontend-eservices.saip.gov.sa'
+    - 'https://tahaqaq-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://statistics-frontend-eservices.saip.gov.sa'
+    - 'https://statistics-se-frontend-examiner-eservices.saip.gov.sa'
+    - 'https://e-filing-bpm-service-eservices.saip.gov.sa'
+    - 'https://customer-service-eservices.saip.gov.sa'
+    - 'https://payment-service-eservices.saip.gov.sa'
+    - 'https://notification-service-eservices.saip.gov.sa'
+    - 'https://dashboard-reports-service-eservices.saip.gov.sa'
+    - 'https://soap-translation-service-eservices.saip.gov.sa'
+    - 'https://application-service-eservices.saip.gov.sa'
+    - 'https://suspicion-service-eservices.saip.gov.sa'
+    - 'https://user-administration-service-eservices.saip.gov.sa'
+
+
+spring.main.allow-circular-references: true
+camunda.date.time.format: yyyy-MM-dd'T'HH:mm:ss.SSSZ
+  
+openapi:
+  server:
+    url: /ip-portal-service
+  contact:
+    url: https://www.saip.gov.sa/ar/
+
+scheduler:
+  expired_agency:
+    cron: "@midnight"
+  priority:
+    cron: "0 0 * * * ?"
+  installment:
+    cron: "@midnight"
+    shed-lock-least: "PT1M"
+    shed-lock-most: "PT30M"
+  publication-issue:
+    cron: "@midnight"
+  installment-publication:
+    cron: "@midnight"
+#    cron: "0 */1 * ? * *" # every minute
+
+publication-issuing:
+  application-categories-under-publishing: "TRADEMARK,PATENT,INDUSTRIAL_DESIGN"
+
+fileName: patent_with_AppId_
+newsLetterFileName : newsLetter_with_Id_
+depositFileName : deposit_with_Id_
+crossOutFileName : cross_out_with_Id_
+depositCertificateNiceClassificationName : تصنيف نيس (11-2021)
+depositCertificateNiceClassificationNumber : 41
+crossOutReportClassificationNumber: فئة 5
+
+installments:
+  test:
+    mode: false
+
+event:
+  queue:
+    notification: ${ACTIVEMQ_QUEUE_NOTIFICATIONS}
+
+javers:
+  enabled: false
+  newObjectSnapshot: true
+  sqlSchema: audit
+
+api:
+  key:
+    value: a71b21483d6ba9c61781b83d760f5c11
+
+file:
+  directory:
+    certificate:
+      path: /mnt/externalstorage01/data/files/patent/certificate/
+  converter: ${DOCUMENTS4JBASEURI}
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      default:
+        wait-duration-in-open-state: 1ms
+
+retry:
+  sending:
+    failedPdfDocument:
+      scheduler: 0 */10 * ? * *

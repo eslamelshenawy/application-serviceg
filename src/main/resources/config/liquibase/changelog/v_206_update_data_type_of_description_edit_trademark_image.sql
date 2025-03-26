@@ -1,0 +1,5 @@
+ALTER TABLE application.application_edit_trademark_image_request
+ALTER COLUMN old_description TYPE TEXT;
+
+ALTER TABLE application.application_edit_trademark_image_request
+ALTER COLUMN new_description TYPE TEXT;

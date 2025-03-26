@@ -1,0 +1,3 @@
+CREATE INDEX idx_applications_info_id_is_deleted ON application.applications_info (id, is_deleted);
+CREATE INDEX idx_application_customer_type_app_id_customer_type ON application.application_customers (application_id,application_customer_type);
+CREATE INDEX idx_application_agents_app_id_Status ON application.application_agents (application_id,status);

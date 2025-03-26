@@ -1,0 +1,1 @@
+ALTER TABLE application.application_priority_request ADD CONSTRAINT application_priority_request_fk02 FOREIGN KEY (document_id) REFERENCES application.documents(id);

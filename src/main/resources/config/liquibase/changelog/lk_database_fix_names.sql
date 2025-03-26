@@ -1,0 +1,2 @@
+update application.lk_databases set name_ar = 'قاعد البيانات 1', name_en = 'Database 1' where code = 'D1';
+update application.lk_databases set name_ar = 'قاعد البيانات 2', name_en = 'Database 2' where code = 'D2';

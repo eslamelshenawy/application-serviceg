@@ -1,0 +1,2 @@
+CREATE INDEX application_nice_classifications_indx_01 ON application.Application_Nice_Classifications(classification_id, application_id);
+CREATE INDEX sub_Classifications_indx_01 ON application.sub_Classifications(classification_id);

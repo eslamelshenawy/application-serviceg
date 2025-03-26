@@ -1,0 +1,2 @@
+CREATE INDEX idx_application_sub_classification
+ON application.application_sub_classifications (application_id, sub_classification_id);

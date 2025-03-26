@@ -1,0 +1,17 @@
+package gov.saip.applicationservice.common.model.agency;
+
+public enum ClientType {
+    INDIVIDUAL,
+    OFFICE,
+    ASSOCIATION,
+    MULTI_OWNERS,
+    INSTITUTE_OR_SAUDI_COMPANY,
+    COMMERCIAL_INSTITUTE,
+    GENERAL_INSTITUTE,
+    GLOBAL_ORGANIZATION,
+    AUTHORITY,
+    INTERNATIONAL_AUTHORITY,
+    MINISTRY,
+    FOREIGN_COMPANY,
+    FOREIGN_INSTITUTE
+}

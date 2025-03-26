@@ -1,0 +1,1 @@
+delete from application.lk_application_status s where s.code = 'UNDER_PROCESS_BY_CLASSIFICATION_OFFICIAL';

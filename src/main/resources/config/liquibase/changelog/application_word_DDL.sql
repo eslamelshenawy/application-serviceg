@@ -1,0 +1,3 @@
+
+create table application.application_word (id int8 not null, created_by_user varchar(255), created_date timestamp, modified_by_user varchar(255), modified_date timestamp, is_deleted int4 not null, synonym varchar(255), word varchar(255), application_info_id int8, primary key (id));
+alter table application.application_word add constraint application_info_application_word_fk foreign key (application_info_id) references application.applications_info;

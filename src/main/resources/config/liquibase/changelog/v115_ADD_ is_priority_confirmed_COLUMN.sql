@@ -1,0 +1,1 @@
+ALTER TABLE application.applications_info ADD is_priority_confirmed boolean NULL DEFAULT false;

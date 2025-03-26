@@ -1,0 +1,1 @@
+ALTER  TABLE  application.applications_info  ADD  CONSTRAINT  UC_application_number  UNIQUE(application_number);

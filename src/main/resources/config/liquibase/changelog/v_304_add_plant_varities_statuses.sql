@@ -1,0 +1,6 @@
+INSERT INTO application.lk_application_status
+(id, created_by_user, created_date, modified_by_user, modified_date, is_deleted, ips_status_desc_ar, ips_status_desc_en, code, ips_status_desc_ar_external, ips_status_desc_en_external, application_category_id)
+VALUES((select max(id+1) from application.lk_application_status), '0', NULL, NULL, NULL, 0, 'تحت التدقيق الشكلي', 'Under review by an checker auditor', 'UNDER_REVIEW_BY_AN_CHECKER_AUDITOR', 'تحت الدراسة شكلياً', 'Under Process', (select id from application.lk_application_category where saip_code = 'PLANT_VARIETIES'));
+INSERT INTO application.lk_application_status
+(id, created_by_user, created_date, modified_by_user, modified_date, is_deleted, ips_status_desc_ar, ips_status_desc_en, code, ips_status_desc_ar_external, ips_status_desc_en_external, application_category_id)
+VALUES((select max(id+1) from application.lk_application_status), '0', NULL, NULL, NULL, 0, 'تحت الفحص الشكلي', 'Under study by the formal examination official', 'UNDER_FORMAL_PROCESS', 'تحت الدراسة شكلياً', 'Under Procedure', (select id from application.lk_application_category where saip_code = 'PLANT_VARIETIES'));

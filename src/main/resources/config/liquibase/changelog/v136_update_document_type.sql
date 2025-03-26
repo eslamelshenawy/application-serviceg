@@ -1,0 +1,1 @@
+UPDATE application.lk_document_type SET description=N'مستندات الاولوية', name_ar=N'مستندات الاولوية' WHERE id=10;

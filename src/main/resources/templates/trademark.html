@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arabic Report</title>
+    <style>
+        body {
+            font-family: "DejaVu Sans", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 595px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .title {
+            margin-bottom: 80px;
+        }
+
+        .detail {
+            margin-bottom: 490px;
+        }
+
+        .text {
+            font-size: 12px;
+        }
+
+        .highlight {
+            background-color: #BFE1FF;
+        }
+
+        .green-bg {
+            background-color: #33FF00;
+            color: #0A0A0A;
+            padding: 7px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 5px;
+        }
+
+        .image {
+            text-align: center;
+            margin-top: -50px;
+        }
+
+        .image img {
+            max-width: 255px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="image">
+    <br>
+    <br>
+    <br>
+    <img src="/resources/templates/SAIP.png" alt="SAIP Logo">
+</div>
+</div>
+<div class="text text-center">
+    <br>
+    <br>
+    <br>
+    <div>السادة / ادارة العمليات الجمركية للغش التجارى فى هيئة الزكاة والضريبة والجمارك المكرمين</div>
+    <div>السلام عليكم ورحمة الله وبركاته</div>
+</div>
+    <div class="title"></div>
+    <div class="detail">
+        <div class="text text-center">
+            اشارة الى البريد المرسل من قبلكم بشان طلب الافادة حيال شمول الارسالية الواردة برقم {customDeclarationNumber} بتاريخ {requestDate} باسم {importerName} نفدكم انه بعد البحث فى سجل العلامات التجارية ودراسة المستندات المقدمة من قبلكم تبين الاتى
+        </div>
+        <div class="text text-center green-bg">حالات الافادة عن معاملات الفسخ الجمركى</div>
+        <table class="table">
+            <thead>
+            <tr class="highlight">
+                <th>النتيجة</th>
+                <th>المنتج</th>
+                <th>مالك العلامة</th>
+                <th>الحالة</th>
+                <th>العلامة</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>العينة المطلوب الافادة حيالها غير مسجلة</td>
+                <td>{product}</td>
+                <td>-</td>
+                <td>-</td>
+                <td>{tradeMarkName}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

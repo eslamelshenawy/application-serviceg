@@ -1,0 +1,2 @@
+ALTER TABLE application.trademark_application_modification ALTER COLUMN old_mark_desc TYPE text USING old_mark_desc::text;
+ALTER TABLE application.trademark_application_modification ALTER COLUMN new_mark_desc TYPE text USING new_mark_desc::text;

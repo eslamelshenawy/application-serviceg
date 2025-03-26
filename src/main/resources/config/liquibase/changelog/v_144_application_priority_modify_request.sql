@@ -1,0 +1,35 @@
+CREATE TABLE application.application_priority_modify_request (
+     id int8 NOT NULL,
+     created_by_user varchar(255) NULL,
+     created_date timestamp NULL,
+     modified_by_user varchar(255) NULL,
+     modified_date timestamp NULL,
+     is_deleted int4 NOT NULL,
+     is_request_updated bool NULL DEFAULT false,
+     CONSTRAINT priority_modify_request_pk PRIMARY KEY (id)
+);
+CREATE TABLE application.application_priority_modify_request_details (
+     id int8 NOT NULL,
+     priority_modify_request_id int8 NOT NULL,
+     created_by_user varchar(255) NULL,
+     created_date timestamp NULL,
+     modified_by_user varchar(255) NULL,
+     modified_date timestamp NULL,
+     is_deleted int4 NOT NULL,
+     application_class varchar(255) NULL,
+     country_id int8 NULL,
+     das_code varchar(255) NULL,
+     filing_date date NULL,
+     priority_application_number varchar(255) NULL,
+     priority_status_id int8 NULL,
+     provide_doc_later bool NULL,
+     priority_document_id int8 NULL,
+     translated_document_id int8 NULL,
+     is_expired bool NULL DEFAULT false,
+     "comment" text NULL,
+     CONSTRAINT priority_modify_request_details_pk PRIMARY KEY (id),
+     CONSTRAINT priority_modify_request_details_fk01 FOREIGN KEY (priority_modify_request_id) REFERENCES application.application_priority_modify_request(id),
+     CONSTRAINT priority_modify_request_details_fk02 FOREIGN KEY (priority_status_id) REFERENCES application.lk_application_priority_status(id),
+     CONSTRAINT priority_modify_request_details_fk03 FOREIGN KEY (priority_document_id) REFERENCES application.documents(id),
+     CONSTRAINT priority_modify_request_details_fk04 FOREIGN KEY (translated_document_id) REFERENCES application.documents(id)
+);

@@ -1,0 +1,2 @@
+create table application.application_support_service_comment (id int8 not null , created_by_user varchar(255), created_date timestamp, modified_by_user varchar(255), modified_date timestamp, is_deleted int4 not null, comment varchar(255), application_support_services_type_id int8, primary key (id));
+alter table application.application_support_service_comment add constraint FK_comment_application_support_services_type foreign key (application_support_services_type_id) references application.application_support_services_type;

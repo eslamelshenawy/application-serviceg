@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title></title>
+  <link rel="shortcut icon" href="#">
+
+</head><!--/head-->
+
+<body>
+
+
+
+<style type="text/css">
+  @font-face {
+    font-family: "bukra";
+    src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "bukra";
+    src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  * {
+    box-sizing: border-box;
+
+    clear: both;
+  }
+
+  body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative !important;
+    direction: rtl;
+    background: #fff;
+    font: normal 13px/20px bukra, sans-serif;
+    color: #323232;
+    padding: 0 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    font-family: 'bukra', sans-serif;
+    line-height: normal;
+  }
+
+  .f11 {
+    font-size: 11px !important;
+  }
+
+  .f12 {
+    font-size: 12px !important;
+  }
+
+  .f13 {
+    font-size: 12px !important;
+  }
+
+  .f14 {
+    font-size: 14px !important;
+  }
+
+  .f16 {
+    font-size: 16px !important;
+  }
+
+  .f24 {
+    font-size: 24px !important;
+  }
+
+  .mb1 {
+    margin-bottom: 10px;
+  }
+
+  .mb2 {
+    margin-bottom: 20px;
+  }
+
+  .mb3 {
+    margin-bottom: 30px;
+  }
+
+  .mb4 {
+    margin-bottom: 40px;
+  }
+
+  .mb5 {
+    margin-bottom: 50px;
+  }
+    .w50 {
+    width: 50%;
+  }
+
+  .w33 {
+    width: 33.333333%;
+  }
+
+  .w25 {
+    width: 25%;
+  }
+
+  .texcolor {
+    color: #007070;
+  }
+
+  .patent {
+    border-bottom: 1px solid #111;
+    position: relative;
+    padding: 10px 0;
+    text-align: right;
+  }
+
+
+
+  .patent td, th {
+    border: 0px solid #111;
+    padding: 8px 15px 8px 8px;
+  }
+
+  .patent tbody td:nth-child(odd) {
+    border-left: 1px solid #111;
+  }
+
+  .noborder {
+    border: 1px solid #111 !important;
+  }
+  .borbottom {
+    border-bottom: 1px solid #111 !important;
+  }
+  .bortop {
+    border-top: 0 !important;
+  }
+
+  .patent {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .patent tbody tr:nth-child(even) {
+
+  }
+
+  .table tr th,
+  .table tr td {
+    line-height: 1.42857143;
+    vertical-align: top;
+  }
+
+
+
+  .ftitlebold {
+    font-weight: 200;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    font-size: medium;
+  }
+
+  .ftitlebold2 {
+    font-weight: 200;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    font-size: medium;
+  }
+
+  .fdatabold {
+    font-weight: 300;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    font-size: medium;
+  }
+
+  .cover {
+    margin: 0 auto;
+    max-width: 692px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+  }
+
+  .cover-img img {
+    width: 100%;
+  }
+
+  .cover-content {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    right: 60px;
+    z-index: 9;
+  }
+
+  .cover-content h1 {
+    color: #007070;
+    font-size: 28px;
+  }
+
+  .cover-content h2 {
+    color: #007070;
+    font-size: 24px;
+  }
+
+  .patname span {
+    color: #007070;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+  }
+
+  .patdate span {
+    font-size: 12px;
+  }
+
+  .patdescription {
+    color: #007070;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .texcolor {
+    color: #007070;
+  }
+
+
+  .patdetails {
+    clear: both;
+    float: right;
+  }
+
+  .patdetails.w50,
+  .patdetails.w33,
+  .patdetails.w25 {
+    float: right;
+    padding-left: 15px;
+    clear: initial;
+  }
+
+  .patdetails.w50:nth-child(even),
+  .patdetails.w33:nth-child(even),
+  .patdetails.w25:nth-child(even) {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+
+  .patdetails h4 {
+    color: #007070;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .patdetails p {
+    margin-bottom: 15px;
+  }
+
+  .pattitle {
+    color: #007070;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: center;
+  }
+
+
+
+
+  .pat-img {
+    clear: both;
+    text-align: center;
+  }
+
+  .pat-img img {
+    max-width: 100%;
+  }
+
+  .pat-img.w50,
+  .pat-img.w33,
+  .pat-img.w25 {
+    float: right;
+    padding-left: 15px;
+    clear: initial;
+  }
+
+  .pat-img.w50:nth-child(even),
+  .pat-img.w33:nth-child(even),
+  .pat-img.w25:nth-child(even) {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+
+  .bg-color {
+    background: #696969;
+    color: #fff;
+  }
+
+  .bg-color2 {
+    background: #c0c0c0;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-left {
+    text-align: left !important;
+  }
+
+  .underline {
+    text-decoration: underline !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .patlist ul {
+    display: inline-block;
+  }
+
+  .patlist h4 {
+    color: #007070;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .patlist span {
+    font-weight: 600;
+    color: #007070;
+  }
+
+  .patlist p {
+    margin-bottom: 15px;
+  }
+
+  .patlist img {
+    float: left;
+    max-width: 150px;
+  }
+
+  .cover-date {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    right: auto;
+    width: 170px;
+  }
+
+  .cover-date ul {
+    list-style: none;
+    text-align: right;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 24px;
+  }
+
+  .cover-date ul span.aaa {
+    list-style: none;
+    font-weight: 600;
+    color: #007070;
+  }
+</style>
+
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="https://fileintegration.saip.gov.sa/previewFile/6157a279-735f-4a83-8e87-3f8d7c92c9a4/IPRs4Patent/" alt="cover">
+
+  </div>
+  <div class="cover-content">
+    <h1>شهادة نموذج صناعي</h1>
+    <p class="f11 mb4">البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة  أو إمكانية  استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+
+    <p class="patname mb3">
+      <span th:text="${applicantNameAr}"></span>
+      <span th:text="${applicantNameEn}"></span>
+    </p>
+    <p class="patname mb3" th:each="l:${list}">
+      <span th:text="${l.nameAr}"></span>
+      <span th:text="${l.nameEn}"></span>
+    </p>
+    <p class="patnumber">شهادة نموذج صناعي رقم :<span th:text="${applicationNumber}"></span> </p>
+    <p class="patdate">
+      <span>بتاريخ<span th:text="${applicationFilingDateHigri}"></span> ه</span>
+      <span>الموافق <span th:text="${applicationFilingDate}"></span></span>
+    </p>
+
+    <h4>عن النموذج الصناعي المسمى:</h4>
+    <p class="patdescription"><span th:text="${titleAr}"></span> / <span th:text="${titleEn}"></span></p>
+    <p class="f12">ولمالك الشهادة الحق في الانتفاع بكامل الحقوق النظامية في المملكةالعربية السعودية خلال فترة سريان الحماية.</p>
+  </div>
+</div>
+
+
+
+<div dir="rtl">
+  <table class="table patent">
+    <thead>
+    <tr>
+      <th colspan="2" class="w33">الهيئة السعودية للملكية الفكرية</th>
+      <th class="borbottom text-center w33" colspan="2" rowspan="2" ><span class="texcolor f24">شهادة النموذج الصناعي</span></th>
+      <th colspan="2" class="w33">تاريخ المنح :<span th:text="${applicationGrantDateHigri}"></span>ه</th>
+    </tr>
+    <tr>
+      <th class="borbottom" colspan="2">رقم النموذج: <span th:text="${applicationNumber}"></span></th>
+      <th class="borbottom" colspan="2">الموافق : <span th:text="${applicationGrantDateHigri}"></span>م</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td colspan="3" class="w50" >رقم الطلب :  <span th:text="${applicationNumber}"></span></td>
+      <td colspan="3" class="w50">الي :  <span th:text="${applicantNameAr}"></span></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="w50" > اسم المصمم :  <span th:text="${applicantNameAr}"></span> </td>
+      <td colspan="3" class="w50">مالك الشهادة :  <span th:text="${applicantNameAr}"></span>,<span th:text="${secondaryApplicantNameAr}"></span> </td>
+    </tr>
+    <tr>
+      <td colspan="3" class="w50"> جنسيتة :  <span th:text="${applicantNationality}"></span> </td>
+      <td colspan="3" class="w50"> عنوانة :  <span th:text="${applicantAddress}"></span></td>
+    </tr>
+    <tr>
+      <td colspan="3" class="w50">الوكيل :  <span th:text="${agentNameAr}"></span> </td>
+      <td colspan="3" class="w50"> الفاحص :الوكيل :  <span th:text="${examiner}"></span> </td>
+    </tr>
+    <tr>
+      <td colspan="3" class="w50"> عدد النماذج الصناعية : <span th:text="${count}"></span> </td>
+      <td colspan="3" class="w50">  </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+
+</div>
+
+<div th:each="sample:${samples}">
+  <div dir="rtl"  >
+
+    <div class="patlist">
+      <h4>  <span th:text="${sample.sampleNumber}"></span>رقم النموذج الصناعي</h4>
+      <ul>
+        <li><span>نوع المنتج:</span> <span th:text="${sample.sampleName}"></span></li>
+        <li><span> عدد الاشكال:</span> <span th:text="${sample.shapeCount}"></span> </li>
+      </ul>
+      <img th:src="@{${sample.urlImage}}" alt="cover">
+    </div>
+
+  </div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div dir="rtl">
+    <div class="pat-img text-center">
+      <img th:src="@{${sample.urlImage}}" alt="cover">
+    </div>
+  </div>
+
+</div>
+
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="https://fileintegration.saip.gov.sa/previewFile/20f155f7-4379-48ce-b715-10d8baea05ca/IPRs4Patent/" alt="cover">
+  </div>
+  <div class="cover-content">
+    <h2>مدة سريان هذه الشهادة عشرون سنة من تاريخ إيداع الطلب</h2>
+    <p class="f11 mb5">وذلك بشرط تسديد المقابل المالي السنوي للبراءة وعدم بطلانها او سقوطها لمخالفتها لاي من احكام نظام براءات الاختراع والتصميمات التخطيطية للدارات المتكاملة والاصناف النباتية والنماذج الصناعية او لائحته التنفيذية.</p>
+
+    <h3>صادرة عن</h3>
+    <h3>الهيئة السعودية للملكية الفكرية</h3>
+    <p>ص ب 6531 , الرياض 13321 , المملكة العربية السعودية</p>
+    <p class="patdescription">SAIP@SAIP.GOV.SA</p>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

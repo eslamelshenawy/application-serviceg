@@ -1,0 +1,1 @@
+alter table application.integrated_circuits add column if not exists first_assignation_date timestamp;

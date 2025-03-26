@@ -1,0 +1,3 @@
+INSERT INTO application.lk_support_service_request_status
+(id, code, name_ar, name_en, name_ar_external, name_en_external)
+VALUES((select max(id) + 1 from application.lk_support_service_request_status), 'COURT_DOCUMENTS_CORRECTION', 'معاد لمقدم الطلب لتعديل وثائق المحكمه', 'Return to the applicant for court documents correction', 'معاد لمقدم الطلب لتعديل وثائق المحكمه', 'Return to the applicant for court documents correction');

@@ -1,0 +1,1 @@
+alter table application.application_support_services_type add column application_request_status varchar(255);

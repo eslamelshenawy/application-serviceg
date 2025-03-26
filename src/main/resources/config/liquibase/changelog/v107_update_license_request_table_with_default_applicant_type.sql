@@ -1,0 +1,1 @@
+update application.licence_request set applicant_type = 'OWNER' where applicant_type is null;

@@ -1,0 +1,2 @@
+alter table application.application_checking_reports add column service_id int8 null;
+ALTER TABLE application.application_checking_reports ADD CONSTRAINT fk6q1k2qm68j5o7u45qpqlo4iky FOREIGN KEY (service_id) REFERENCES application.application_support_services_type(id);

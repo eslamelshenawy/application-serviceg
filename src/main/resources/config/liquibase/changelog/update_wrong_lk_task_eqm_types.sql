@@ -1,0 +1,1 @@
+UPDATE application.lk_task_eqm_types SET code = 'REVIEW_CHECKER_1_TM' WHERE code = 'APPROVE_ACCEPTANCE_EXAMINER_TM';

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+
+</head><!--/head-->
+
+<body>
+
+
+
+<style type="text/css">
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    @font-face {
+        font-family: "Dubai";
+        src: url('fonts/Dubai-Regular.ttf');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Dubai";
+        src: url('fonts/Dubai-Bold.ttf');
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    div {
+        clear: both;
+    }
+
+    body {
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative !important;
+        direction: rtl;
+        background: #fff;
+        font: normal 13px/20px Dubai, sans-serif;
+        color: #323232;
+        padding: 0 15px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        font-family: 'Dubai', sans-serif;
+        line-height: normal;
+    }
+
+    .f11 {
+        font-size: 11px !important;
+    }
+
+    .f12 {
+        font-size: 12px !important;
+    }
+
+    .f13 {
+        font-size: 12px !important;
+    }
+
+    .f14 {
+        font-size: 14px !important;
+    }
+
+    .f16 {
+        font-size: 16px !important;
+    }
+
+    .f24 {
+        font-size: 24px !important;
+    }
+
+    .mb1 {
+        margin-bottom: 10px;
+    }
+
+    .mb2 {
+        margin-bottom: 20px;
+    }
+
+    .mb3 {
+        margin-bottom: 30px;
+    }
+
+    .mb4 {
+        margin-bottom: 40px;
+    }
+
+    .mb5 {
+        margin-bottom: 50px;
+    }
+
+    .w50 {
+        width: 50%;
+    }
+
+    .w33 {
+        width: 33.333333%;
+    }
+
+    .w25 {
+        width: 25%;
+    }
+
+    .texcolor {
+        color: #007070;
+    }
+    .patent td,
+    th {
+        border: 1px solid #111;
+    }
+
+    .noborder {
+        border: 0 !important;
+    }
+
+    .patent {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .patent tbody tr:nth-child(even) {
+        background-color: #f6f6f6;
+    }
+
+    .table tr th,
+    .table tr td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+
+
+
+    .ftitlebold {
+        font-weight: 200;
+        padding-inline-start: 5px;
+        padding-inline-end: 5px;
+        font-size: medium;
+    }
+
+    .ftitlebold2 {
+        font-weight: 200;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: medium;
+    }
+
+    .fdatabold {
+        font-weight: 300;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: medium;
+    }
+
+    .cover {
+        margin: 0 auto;
+        max-width: 692px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 0;
+        text-align: center;
+    }
+
+    .cover-img img {
+        width: 100%;
+    }
+
+    .cover-content {
+        position: absolute;
+        top: 150px;
+        left: 60px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .cover-content h1 {
+        color: #007070;
+        font-size: 28px;
+    }
+
+    .cover-content h2 {
+        color: #007070;
+        font-size: 24px;
+    }
+
+    .patname span {
+        color: #007070;
+        font-size: 14px;
+        line-height: 24px;
+        display: block;
+    }
+
+    .patdate span {
+        font-size: 12px;
+    }
+
+    .patdescription {
+        color: #007070;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .texcolor {
+        color: #007070;
+    }
+
+
+    .patdetails {
+        clear: both;
+        float: right;
+    }
+
+    .patdetails.w50,
+    .patdetails.w33,
+    .patdetails.w25 {
+        float: right;
+        padding-left: 15px;
+        clear: initial;
+    }
+
+    .patdetails.w50:nth-child(even),
+    .patdetails.w33:nth-child(even),
+    .patdetails.w25:nth-child(even) {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .patdetails h4 {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .patdetails p {
+        margin-bottom: 15px;
+    }
+
+    .pattitle {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        text-decoration: underline;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+
+
+    .pat-img {
+        clear: both;
+        text-align: center;
+    }
+
+    .pat-img img {
+        max-width: 100%;
+    }
+
+    .pat-img.w50,
+    .pat-img.w33,
+    .pat-img.w25 {
+        float: right;
+        padding-left: 15px;
+        clear: initial;
+    }
+
+    .pat-img.w50:nth-child(even),
+    .pat-img.w33:nth-child(even),
+    .pat-img.w25:nth-child(even) {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .bg-color {
+        background: #696969;
+        color: #fff;
+    }
+
+    .bg-color2 {
+        background: #c0c0c0;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .text-left {
+        text-align: left !important;
+    }
+
+    .underline {
+        text-decoration: underline !important;
+    }
+
+    .text-right {
+        text-align: right !important;
+    }
+
+    .patlist ul {
+        display: inline-block;
+    }
+
+    .patlist h4 {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .patlist span {
+        font-weight: 600;
+        color: #007070;
+    }
+
+    .patlist p {
+        margin-bottom: 15px;
+    }
+
+    .patlist img {
+        float: left;
+        max-width: 150px;
+    }
+
+    .cover-date {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+    }
+
+    .cover-date ul {
+        list-style: none;
+        text-align: right;
+        font-size: 14px;
+        padding: 0 15px;
+        line-height: 24px;
+    }
+
+    .cover-date ul span {
+        list-style: none;
+        font-weight: 600;
+        color: #007070;
+    }
+
+    .tm-cover {
+        margin: 0 auto;
+        max-width: 1000px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 0;
+        text-align: center;
+    }
+
+    .tm-cover-img img {
+        width: 100%;
+    }
+
+    .tm-cover-content {
+        position: absolute;
+        top: 150px;
+        left: 60px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .tm-cover-content h1 {
+        color: #007070;
+        font-size: 28px;
+    }
+
+    .tm-cover-content h2 {
+        color: #007070;
+        font-size: 24px;
+    }
+    .tm-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+    }
+
+    .tm-content .tm-logo {
+        position: absolute;
+        top: 36px;
+        left: 36px;
+        right: auto;
+        z-index: 9;
+        width: 162px;
+    }
+    .tm-content p {
+        position: absolute;
+        font-size: 12.5px;
+        font-weight: 600;
+        line-height: 24.3px;
+        margin: 0;
+        z-index: 9;
+        text-align: right;
+        padding: 0 10px;
+    }
+    .tm-content p.reg-num {
+        top: 94px;
+        left: auto;
+        right: 128px;
+        width: 155px;
+    }
+
+    .tm-content p.tm-class {
+        top: 179px;
+        left: 200px;
+        right: 128px;
+        width: auto;
+    }
+    .tm-content p.reg-date {
+        top: 130px;
+        left: auto;
+        right: 115px;
+        width: 255px;
+    }
+    .tm-content p.protection-start {
+        top: 130px;
+        left: auto;
+        right: 440px;
+        width: 140px;
+    }
+    .tm-content p.protection-end {
+        top: 130px;
+        left: auto;
+        right: 655px;
+        width: 130px;
+    }
+    .tm-content p.priority-num {
+        top: 152px;
+        left: auto;
+        right: 92px;
+        width: 275px;
+    }
+    .tm-content p.priority-date {
+        top: 152px;
+        left: auto;
+        right: 445px;
+        width: 135px;
+    }
+    .tm-content p.priority-country {
+        top: 152px;
+        left: auto;
+        right: 655px;
+        width: 140px;
+    }
+    .tm-content p.vienna {
+        top: 178px;
+        left: auto;
+        right: 130px;
+        width: 665px;
+    }
+    .tm-content p.tm-description {
+        top: 226px;
+        left: 36px;
+        right: 103px;
+    }
+    .tm-content p.tm-conditions {
+        top: 325px;
+        left: auto;
+        right: 444px;
+        width: 518px;
+    }
+    .tm-content p.tm-owner_en {
+        top: 353px;
+        left: 110px;
+        right: 36px;
+        text-align: left;
+    }
+    .tm-content p.address_en {
+        top: 403px;
+        left: 120px;
+        right: 36px;
+        text-align: left;
+    }
+    .tm-content p.nationality_en {
+        top: 452px;
+        left: 630px;
+        right: auto;
+        width: 325px;
+        text-align: left;
+    }
+    .tm-content p.tm-owner_ar {
+        top: 350px;
+        right: 95px;
+        left: 36px;
+        text-align: right;
+    }
+    .tm-content p.address_ar {
+        top: 400px;
+        right: 75px;
+        left: 36px;
+        text-align: right;
+    }
+    .tm-content p.nationality_ar {
+        top: 449px;
+        right: 660px;
+        left: auto;
+        width: 303px;
+        text-align: right;
+    }
+    .tm-content p.products1 {
+        top: 502px;
+        left: 26px;
+        right: 198px;
+    }
+    .tm-content p.products2 {
+        top: 129px;
+        left: 26px;
+        right: 210px;
+        /*padding-right: 120px;*/
+        text-indent: 120px;
+    }
+
+    .tm-content p.reg-num2 {
+        top: 93px;
+        left: auto;
+        right: 120px;
+        width: 155px;
+    }
+    .tm-content p.protection-start2 {
+        top: 88px;
+        left: auto;
+        right: 132px;
+        width: 140px;
+    }
+    .tm-content p.tm-description2 {
+        top: 153px;
+        left: 36px;
+        right: 36px;
+        text-indent: 120px;
+    }
+    .tm-content p.release-date {
+        top: 90px;
+        left: auto;
+        right: 145px;
+        width: 155px;
+    }
+    .tm-content p.license-num {
+        top: 483px;
+        left: auto;
+        right: 100px;
+        width: 235px;
+    }
+    .tm-content p.license-start-date {
+        top: 483px;
+        left: auto;
+        right: 433px;
+        width: 220px;
+    }
+    .tm-content p.license-end-date {
+        top: 483px;
+        left: auto;
+        right: 750px;
+        width: 215px;
+    }
+    .tm-content p.licensee {
+        top: 507px;
+        left: 36px;
+        right: 113px;
+    }
+    .tm-content p.licensee-address {
+        top: 555px;
+        left: 36px;
+        right: 120px;
+    }
+    .tm-content p.licensee-nationality {
+        top: 581px;
+        left: auto;
+        right: 696px;
+        width: 270px;
+    }
+    .tm-content p.license-num2 {
+        top: 121px;
+        left: auto;
+        right: 120px;
+        width: 155px;
+    }
+    .tm-content p.tm-area {
+        top: 160px;
+        left: 36px;
+        right: 205px;
+    }
+    .tm-content p.nice {
+        top: 473px;
+        left: auto;
+        right: 99px;
+        width: 525px;
+    }
+    .tm-content p.tm-class2 {
+        top: 476px;
+        left: auto;
+        right: 660px;
+        width: 304px;
+    }
+
+    .qr-code {
+        max-width: 150px;
+        margin: 10px;
+        display: inline-block;
+        height: auto;
+        padding: 4px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        position: absolute;
+        bottom: 20px;
+        left: auto;
+        right: 36px;
+    }
+</style>
+
+<div class="tm-cover">
+    <div class="tm-cover-img">
+        <img src="https://fileintegration.saip.gov.sa/previewFile/21d6c76b-9fb2-413c-ac85-d5d13e4b6d92/IPRs4Patent/" alt="cover">
+    </div>
+    <div class="tm-content">
+        <img class="tm-logo" th:src="@{${tmImage}}" alt="">
+
+        <p class="reg-num"><span th:text="${applicationNumber}"> </span></p>
+        <p class="reg-date"><span th:text="${regDate}"> </span></p>
+        <p class="protection-start"><span th:text="${grantDateStartHigri}"> </span></p>
+        <p class="protection-end"><span th:text="${grantDateEndHigri}"> </span></p>
+
+        <p class="priority-num">&nbsp;<span th:text="${priorityNumber}"  > </span></p>
+        <p class="priority-date">&nbsp;<span th:text="${priorityDate}" > </span></p>
+        <p class="priority-country">&nbsp;<span th:text="${priorityCountry}"  > </span></p>
+
+        <p class="tm-description"><span th:text="${tradeMarkDesc}"  > </span></p>
+        <p class="tm-conditions"><span th:text="${tmAcceptConditionDesc}"> </span></p>
+        <p class="tm-owner_ar" th:if="${isArabicApplicant}" dir="rtl"><span th:text="${applicantNameAr}"  > </span></p>
+        <p class="tm-owner_ar" th:if="${!isArabicApplicant}" dir="ltr" ><span th:text="${applicantNameAr}"  > </span></p>
+
+
+        <p class="address_ar" th:if="${isArabicAddress}" dir="rtl"><span th:text="${address}"  > </span></p>
+        <p class="address_ar" th:if="${!isArabicAddress}" dir="ltr" ><span th:text="${address}"  > </span></p>
+
+        <p class="nationality_ar"><span th:text="${nationality}"  > </span></p>
+
+        <p class="nice"><span th:text="${nice}" > </span></p>
+        <p class="vienna"><span th:text="${vennaCodes}"  > </span></p>
+        <p class="tm-class2"><span th:text="${classification}"> </span></p>
+        <p class="products1"><span th:text="${firstPart}"  > </span></p>
+<!--        <img th:src="${qrCodeImageBase64}" class="qr-code" />-->
+    </div>
+</div>
+
+<th:block th:if="${additionalPageRequired}">
+    <th:block th:each="remText : ${remainingTextList}">
+        <div class="tm-cover">
+            <div class="tm-cover-img">
+                <img src="https://fileintegration.saip.gov.sa/previewFile/eff13d5e-a43c-4fb0-b1f9-933b56cfadd8/IPRs4Patent/"
+                     alt="cover">
+            </div>
+            <div class="tm-content">
+                <p class="reg-num2"><span th:text="${applicationNumber}"></span></p>
+                <p class="products2"><span th:text="${remText}"></span>
+            </div>
+        </div>
+    </th:block>
+</th:block>
+
+</body>
+</html>

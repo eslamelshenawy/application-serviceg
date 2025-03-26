@@ -1,0 +1,5 @@
+DELETE FROM application.support_service_application_categories
+WHERE support_service_id=6 AND category_id=1;
+
+DELETE FROM application.support_service_application_categories
+WHERE support_service_id=45 AND category_id=2;

@@ -1,0 +1,2 @@
+alter table application.agent_substitution_request add column customer_id int8;
+INSERT INTO application.lk_support_service_type (id, is_deleted, desc_ar, desc_en, type)VALUES(12, 0, 'تبديل وكيل ', 'Agent Substitution', 'AGENT_SUBSTITUTION');

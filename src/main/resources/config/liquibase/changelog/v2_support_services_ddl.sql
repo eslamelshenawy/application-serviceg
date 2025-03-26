@@ -1,0 +1,4 @@
+
+create table application.application_support_services_type (id int8 not null, created_by_user varchar(255), created_date timestamp, modified_by_user varchar(255), modified_date timestamp, is_deleted int4 not null, support_service_request_id int8, application_info_id int8, lk_support_service_type_id int8, primary key (id));
+alter table application.application_support_services_type add constraint FKohf4r5lb332nhlv8k0wwnduyb foreign key (application_info_id) references application.applications_info;
+alter table application.application_support_services_type add constraint FKo3rdm31sxq5vg7chkjdg26jg0 foreign key (lk_support_service_type_id) references application.lk_support_services;

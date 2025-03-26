@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title></title>
+  <link rel="shortcut icon" href="#">
+
+</head><!--/head-->
+
+<body>
+
+
+
+<style type="text/css">
+  @font-face {
+    font-family: "bukra";
+    src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "bukra";
+    src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+  }
+
+  * {
+    box-sizing: border-box;
+
+    clear: both;
+  }
+
+  body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative !important;
+    direction: rtl;
+    background: #fff;
+    font: normal 13px/20px bukra, sans-serif;
+    color: #323232;
+    padding: 0 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    font-family: 'bukra', sans-serif;
+    line-height: normal;
+  }
+
+  .f11 {
+    font-size: 11px !important;
+  }
+
+  .f12 {
+    font-size: 12px !important;
+  }
+
+  .f13 {
+    font-size: 12px !important;
+  }
+
+  .f14 {
+    font-size: 14px !important;
+  }
+
+  .f16 {
+    font-size: 16px !important;
+  }
+
+  .f24 {
+    font-size: 24px !important;
+  }
+
+  .mb1 {
+    margin-bottom: 10px;
+  }
+
+  .mb2 {
+    margin-bottom: 20px;
+  }
+
+  .mb3 {
+    margin-bottom: 30px;
+  }
+
+  .mb4 {
+    margin-bottom: 40px;
+  }
+
+  .mb5 {
+    margin-bottom: 50px;
+  }
+
+  .w50 {
+    width: 50%;
+  }
+
+  .w33 {
+    width: 33.333333%;
+  }
+
+  .w25 {
+    width: 25%;
+  }
+
+  .texcolor {
+    color: #007070;
+  }
+
+  .patent {
+    border-bottom: 1px solid #111;
+    position: relative;
+    padding: 10px 0;
+    text-align: right;
+  }
+
+
+
+  .patent td, th {
+    border: 0px solid #111;
+    padding: 8px 15px 8px 8px;
+  }
+
+  .patent tbody td:nth-child(odd) {
+    border-left: 1px solid #111;
+  }
+
+  .noborder {
+    border: 1px solid #111 !important;
+  }
+  .borbottom {
+    border-bottom: 1px solid #111 !important;
+  }
+  .bortop {
+    border-top: 0 !important;
+  }
+
+  .patent {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .patent tbody tr:nth-child(even) {
+
+  }
+
+  .table tr th,
+  .table tr td {
+    line-height: 1.42857143;
+    vertical-align: top;
+  }
+
+
+
+  .ftitlebold {
+    font-weight: 200;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    font-size: medium;
+  }
+
+  .ftitlebold2 {
+    font-weight: 200;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    font-size: medium;
+  }
+
+  .fdatabold {
+    font-weight: 300;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+    font-size: medium;
+  }
+
+  .cover {
+    margin: 0 auto;
+    max-width: 692px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+  }
+
+  .cover-img img {
+    width: 100%;
+  }
+
+  .cover-content {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    right: 60px;
+    z-index: 9;
+  }
+
+  .cover-content h1 {
+    color: #007070;
+    font-size: 28px;
+  }
+
+  .cover-content h2 {
+    color: #007070;
+    font-size: 24px;
+  }
+
+  .patname span {
+    color: #007070;
+    font-size: 14px;
+    line-height: 24px;
+    display: block;
+  }
+
+  .patdate span {
+    font-size: 12px;
+  }
+
+  .patdescription {
+    color: #007070;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .texcolor {
+    color: #007070;
+  }
+
+
+  .patdetails {
+    clear: both;
+    float: right;
+  }
+
+  .patdetails.w50,
+  .patdetails.w33,
+  .patdetails.w25 {
+    float: right;
+    padding-left: 15px;
+    clear: initial;
+  }
+
+  .patdetails.w50:nth-child(even),
+  .patdetails.w33:nth-child(even),
+  .patdetails.w25:nth-child(even) {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+
+  .patdetails h4 {
+    color: #007070;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .patdetails p {
+    margin-bottom: 15px;
+  }
+
+  .pattitle {
+    color: #007070;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-decoration: underline;
+    font-size: 18px;
+    text-align: center;
+  }
+
+
+
+
+  .pat-img {
+    clear: both;
+    text-align: center;
+  }
+
+  .pat-img img {
+    max-width: 100%;
+  }
+
+  .pat-img.w50,
+  .pat-img.w33,
+  .pat-img.w25 {
+    float: right;
+    padding-left: 15px;
+    clear: initial;
+  }
+
+  .pat-img.w50:nth-child(even),
+  .pat-img.w33:nth-child(even),
+  .pat-img.w25:nth-child(even) {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+
+  .bg-color {
+    background: #696969;
+    color: #fff;
+  }
+
+  .bg-color2 {
+    background: #c0c0c0;
+    color: #000;
+    font-weight: 600;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .text-left {
+    text-align: left !important;
+  }
+
+  .underline {
+    text-decoration: underline !important;
+  }
+
+  .text-right {
+    text-align: right !important;
+  }
+
+  .patlist ul {
+    display: inline-block;
+  }
+
+  .patlist h4 {
+    color: #007070;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .patlist span {
+    font-weight: 600;
+    color: #007070;
+  }
+
+  .patlist p {
+    margin-bottom: 15px;
+  }
+
+  .patlist img {
+    float: left;
+    max-width: 150px;
+  }
+
+  .cover-date {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    right: auto;
+    width: 170px;
+  }
+
+  .cover-date ul {
+    list-style: none;
+    text-align: right;
+    font-size: 14px;
+    padding: 0 15px;
+    line-height: 24px;
+  }
+
+  .cover-date ul span.aaa {
+    list-style: none;
+    font-weight: 600;
+    color: #007070;
+  }
+</style>
+
+
+
+<div class="cover">
+  <div class="cover-img">
+    <img src="https://fileintegration.saip.gov.sa/previewFile/2ecd19cc-bc63-4cee-a53b-ad03942a8479/IPRs4Patent/" alt="cover">
+  </div>
+  <div class="cover-date">
+    <ul>
+      <li><span>الرقم:</span> 206/20505</li>
+      <li><span> التاريخ:</span><span th:text="${currentDate}"></span>هـ </li>
+    </ul>
+  </div>
+  <div class="cover-content">
+    <div dir="rtl">
+      <table class="table patent mb1">
+        <thead>
+        <tr >
+          <th class="borbottom text-center" colspan="6" ><b>اشعار رفض الطلب</b></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td colspan="3" class="w50" >رقم الطلب :  <span th:text="${applicationNumber}"></span></td>
+          <td colspan="3" class="w50">الي :  <span th:text="${applicantNameAr}"></span></td>
+        </tr>
+        <tr>
+          <td colspan="3" class="w50" >نوع الطلب :  <span th:text="${category}"></span> </td>
+          <td colspan="3" class="w50">العنوان :  <span th:text="${applicantAddress}"></span> </td>
+        </tr>
+        <tr>
+          <td colspan="3" class="w50">تاريخ الايداع :  <span th:text="${filingDate}"></span> </td>
+          <td colspan="3" class="w50">مقدم الطلب :  <span th:text="${applicantNameAr}"></span></td>
+        </tr>
+        <tr>
+          <td colspan="3" class="w50">الوكيل :  <span th:text="${agentNameAr}"></span> </td>
+          <td colspan="3" class="w50"> </td>
+        </tr>
+        </tbody>
+      </table>
+      <p class="f14 text-right">استنادا لاحكام المادة 14 فقرة (ب) من نظام براءات الاختراع و التصميمات التخطيطية للدارات المتكاملة و الاصناف النباتية و النماذج الصناعية و المادة  46 فقرة (2) للائحة التنفيذية,فان الهيئة تشعركم بان الطلب الموضح بياناته اعلاه قد تم رفضه بناءا علي :  </p>
+      <h4>اشعار تقرير الفحص رقم : 206/161903      و تاريخ : ١٤٤٤/١٢/٢١ هـ</h4>
+      <p class="f14 text-right underline mb4"><b>اذ انه لم يستوفي المطلوب وفق ما ورد في الاشعار</b></p>
+      <p class="text-right "> <b> ملحوظة:-في حال وجود اعتراض علي هذا القرار بامكانكم التظلم امام لجنة النظر في دعاوي براءات الاختراع و ذلك وفقا لاحكام المادة 36 من النظام و الباب العاشر من اللا ئحة التنفيذية</b></p><br><br><br><br><br><br>
+      <h4 class="text-left">مدير إدارة النماذج الصناعية والتصميمات التخطيطية للدارات المتكاملة</h4>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

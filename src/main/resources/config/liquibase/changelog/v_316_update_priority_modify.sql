@@ -1,0 +1,5 @@
+ALTER TABLE application.application_priority_modify_request DROP COLUMN created_by_user;
+ALTER TABLE application.application_priority_modify_request DROP COLUMN created_date;
+ALTER TABLE application.application_priority_modify_request DROP COLUMN modified_by_user;
+ALTER TABLE application.application_priority_modify_request DROP COLUMN modified_date;
+ALTER TABLE application.application_priority_modify_request DROP COLUMN is_deleted;

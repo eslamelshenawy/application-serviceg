@@ -1,0 +1,9 @@
+package gov.saip.applicationservice.common.repository.supportService;
+
+import gov.saip.applicationservice.common.model.supportService.application_edit_name_address.ApplicationEditNameAddressRequest;
+import gov.saip.applicationservice.common.repository.SupportServiceRequestRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ApplicationEditNameAddressRequestRepository extends SupportServiceRequestRepository<ApplicationEditNameAddressRequest> {
+}

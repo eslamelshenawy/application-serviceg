@@ -1,0 +1,1 @@
+update application.lk_task_eqm_items set shown = true;

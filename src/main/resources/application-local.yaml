@@ -1,0 +1,141 @@
+server:
+  port: 8085
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+  application:
+    name: application-service
+  redis:
+    host: localhost
+    port: 6379
+    username: ""
+    password: ""
+  artemis:
+    mode: native
+    user: admin
+    password: admin
+    broker-url: tcp://localhost:61616
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format:
+          sql: 'true'
+        default_schema: application
+        jdbc:
+          time_zone: UTC
+    hibernate:
+      ddl-auto: none
+    show-sql: 'true'
+  liquibase:
+    enabled: false
+    change-log: classpath:config/liquibase/changelog.yaml
+    database-change-log-lock-table: application_databasechangeloglock
+
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 1
+      maximum-pool-size: 3
+      idle-timeout: 5000
+      max-lifetime: 500
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/LocalDB #local
+    username: postgres
+    password: postgres
+
+nuxeo:
+  base-url: https://fileintegration.saip.gov.sa
+  upload:
+    url: ${nuxeo.base-url}/uploadAsFile/
+  download:
+    url: ${nuxeo.base-url}/download/
+  preview:
+    url: ${nuxeo.base-url}/previewFile/
+  userName: IPRs4AAS
+
+link:
+  portal: http://gp-iprights-app-container-frontend.development.internal.saip.gov.sa/
+  publication : https://gp-iprights-services-gateway-site-frontend.development.internal.saip.gov.sa/
+soap:
+  translation:
+    url: http://gp-iprights-soap-translation-service.development.saip.internal:9090/soap-translation-service/internal-calling
+
+client:
+  feign:
+    e-filing-bpm : http://localhost:8084
+    notification : http://localhost:8089
+    customer : http://localhost:8083
+    user.manage: http://localhost:8091
+    application: http://localhost:8085
+    trademark: http://localhost:8087
+    payment: http://localhost:8090
+    patent: http://localhost:8086
+    industrial: http://localhost:8088
+    suspicion:  http://localhost:8092
+    dashboard:  http://localhost:8093
+    ipsearch: http://gp-ipsearch-api-examiner.development.internal.saip.gov.sa/api/v1/
+
+redis.host: localhost
+redis.port: 6379
+redis.username: ""
+redis.password: ""
+
+cors:
+  allowedOrigins:
+    - 'http://gp-iprights-app-container-se-frontend.development.internal.saip.gov.sa'
+    - 'http://gp-iprights-app-container-frontend.development.internal.saip.gov.sa'
+    - 'http://app.local.iprs.saip.gov.sa:3000'
+    - 'http://admin.app.local.iprs.saip.gov.sa:4000'
+
+
+fileName: patent_with_AppId_
+newsLetterFileName : newsLetter_with_Id_
+depositFileName : deposit_with_Id_
+crossOutFileName : cross_out_with_Id_
+depositCertificateNiceClassificationName : تصنيف نيس (11-2021)
+depositCertificateNiceClassificationNumber : 41
+crossOutReportClassificationNumber: فئة 5
+
+event:
+  queue:
+    notification: notification
+
+scheduler:
+  expired_agency:
+    cron: "@midnight"
+  priority:
+    cron: "0 0 * * * ?"
+  installment:
+    cron: "@midnight"
+#    cron: "0 * * * * *" # every minute
+#    cron: "0 */5 * ? * *" # every 5 minutes
+    shed-lock-least: "PT3M"
+    shed-lock-most: "PT4M"
+  publication-issue:
+    cron: "@midnight"
+
+installments:
+  test:
+    mode: true
+
+
+api:
+  key:
+    value: a71b21483d6ba9c61781b83d760f5c11
+
+
+file:
+  directory:
+    certificate:
+      path: C:\mnt\externalstorage01\
+  converter:
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      default:
+        wait-duration-in-open-state: 1ms

@@ -1,0 +1,1 @@
+UPDATE application.lk_application_status  SET  code='UNDER_FORMAL_PROCESS' WHERE id=5;

@@ -1,0 +1,1 @@
+ALTER TABLE application.application_relevant_type ADD COLUMN IF NOT EXISTS is_paid BOOLEAN DEFAULT false NOT NULL;

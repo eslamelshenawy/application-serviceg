@@ -1,0 +1,1 @@
+UPDATE application.lk_support_services set name_ar='قيد الترخيص' WHERE id=9;

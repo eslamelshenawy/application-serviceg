@@ -1,0 +1,2 @@
+alter table application.lk_classification_versions add column category_id int8;
+alter table application.lk_classification_versions add constraint FKko8sogw5iuam9yw5f2v66ss63 foreign key (category_id) references application.lk_application_category;

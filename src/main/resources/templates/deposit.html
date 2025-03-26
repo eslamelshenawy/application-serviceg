@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+
+</head><!--/head-->
+
+<body>
+
+<style type="text/css">
+    @font-face {
+      font-family: "bukra";
+      src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+      font-weight: 400;
+      font-display: swap;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "bukra";
+      src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+      font-weight: 600;
+      font-display: swap;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+
+      clear: both;
+    }
+
+    body {
+      box-sizing: border-box;
+      margin: 0 auto;
+      position: relative !important;
+      direction: rtl;
+      background: #fff;
+      font: normal 13px/20px bukra, sans-serif;
+      color: #323232;
+      padding: 0 15px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 600;
+      font-family: 'bukra', sans-serif;
+      line-height: normal;
+    }
+
+    .f11 {
+      font-size: 11px !important;
+    }
+
+    .f12 {
+      font-size: 12px !important;
+    }
+
+    .f13 {
+      font-size: 12px !important;
+    }
+
+    .f14 {
+      font-size: 14px !important;
+    }
+
+    .f16 {
+      font-size: 16px !important;
+    }
+
+    .f24 {
+      font-size: 24px !important;
+    }
+
+    .mb1 {
+      margin-bottom: 10px;
+    }
+
+    .mb2 {
+      margin-bottom: 20px;
+    }
+
+    .mb3 {
+      margin-bottom: 30px;
+    }
+
+    .mb4 {
+      margin-bottom: 40px;
+    }
+
+    .mb5 {
+      margin-bottom: 50px;
+    }
+
+    .w50 {
+      width: 50%;
+    }
+
+    .w33 {
+      width: 33.333333%;
+    }
+
+    .w25 {
+      width: 25%;
+    }
+
+    .texcolor {
+      color: #007070;
+    }
+
+    .patent td,
+    th {
+      border: 1px solid #111;
+    }
+
+    .noborder {
+      border: 0 !important;
+    }
+
+    .patent {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .patent tbody tr:nth-child(even) {
+      background-color: #f6f6f6;
+    }
+
+    .table tr th,
+    .table tr td {
+      padding: 8px;
+      line-height: 1.42857143;
+      vertical-align: top;
+    }
+
+
+
+    .ftitlebold {
+      font-weight: 200;
+      padding-inline-start: 5px;
+      padding-inline-end: 5px;
+      font-size: medium;
+    }
+
+    .ftitlebold2 {
+      font-weight: 200;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      font-size: medium;
+    }
+
+    .fdatabold {
+      font-weight: 300;
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+      font-size: medium;
+    }
+
+    .cover {
+      margin: 0 auto;
+      max-width: 692px;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 0;
+      text-align: center;
+    }
+
+    .cover-img img {
+      width: 100%;
+    }
+
+    .cover-content {
+      position: absolute;
+      top: 150px;
+      left: 60px;
+      right: 60px;
+      z-index: 9;
+    }
+
+    .cover-content h1 {
+      color: #007070;
+      font-size: 28px;
+    }
+
+    .cover-content h2 {
+      color: #007070;
+      font-size: 24px;
+    }
+
+    .patname span {
+      color: #007070;
+      font-size: 14px;
+      line-height: 24px;
+      display: block;
+    }
+
+    .patdate span {
+      font-size: 12px;
+    }
+
+    .patdescription {
+      color: #007070;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .texcolor {
+      color: #007070;
+    }
+
+
+    .patdetails {
+      clear: both;
+      float: right;
+    }
+
+    .patdetails.w50,
+    .patdetails.w33,
+    .patdetails.w25 {
+      float: right;
+      padding-left: 15px;
+      clear: initial;
+    }
+
+    .patdetails.w50:nth-child(even),
+    .patdetails.w33:nth-child(even),
+    .patdetails.w25:nth-child(even) {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+
+    .patdetails h4 {
+      color: #007070;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+
+    .patdetails p {
+      margin-bottom: 15px;
+    }
+
+    .pattitle {
+      color: #007070;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-decoration: underline;
+      font-size: 18px;
+      text-align: center;
+    }
+
+
+
+
+    .pat-img {
+      clear: both;
+      text-align: center;
+    }
+
+    .pat-img img {
+      max-width: 100%;
+    }
+
+    .pat-img.w50,
+    .pat-img.w33,
+    .pat-img.w25 {
+      float: right;
+      padding-left: 15px;
+      clear: initial;
+    }
+
+    .pat-img.w50:nth-child(even),
+    .pat-img.w33:nth-child(even),
+    .pat-img.w25:nth-child(even) {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+
+    .bg-color {
+      background: #696969;
+      color: #fff;
+    }
+
+    .bg-color2 {
+      background: #c0c0c0;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .text-center {
+      text-align: center !important;
+    }
+
+    .text-left {
+      text-align: left !important;
+    }
+
+    .underline {
+      text-decoration: underline !important;
+    }
+
+    .text-right {
+      text-align: right !important;
+    }
+
+    .patlist ul {
+      display: inline-block;
+    }
+
+    .patlist h4 {
+      color: #007070;
+      margin-bottom: 15px;
+      margin-top: 15px;
+    }
+
+    .patlist span {
+      font-weight: 600;
+      color: #007070;
+    }
+
+    .patlist p {
+      margin-bottom: 15px;
+    }
+
+    .patlist img {
+      float: left;
+      max-width: 150px;
+    }
+
+    .cover-date {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+    }
+
+    .cover-date ul {
+      list-style: none;
+      text-align: right;
+      font-size: 14px;
+      padding: 0 15px;
+      line-height: 24px;
+    }
+
+    .cover-date ul span {
+      list-style: none;
+      font-weight: 600;
+      color: #007070;
+    }
+
+    .tm-cover {
+      margin: 0 auto;
+      max-width: 692px;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 0;
+      text-align: center;
+    }
+
+    .tm-cover-img img {
+      width: 692px;
+    }
+
+    .tm-cover-content {
+      position: absolute;
+      top: 150px;
+      left: 60px;
+      right: 60px;
+      z-index: 9;
+    }
+
+    .tm-cover-content h1 {
+      color: #007070;
+      font-size: 28px;
+    }
+
+    .tm-cover-content h2 {
+      color: #007070;
+      font-size: 24px;
+    }
+    .tm-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9;
+    }
+
+    .tm-content .tmlogo {
+      position: absolute;
+      top: 349px;
+      left: 46px;
+      right: auto;
+      z-index: 9;
+      width: 100px;
+    }
+    .tm-content p {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 23px;
+      margin: 0;
+      z-index: 9;
+      text-align: right;
+      padding: 0 10px;
+    }
+    .tm-content p.gentlemen {
+      top: 209px;
+      left: auto;
+      right: 71px;
+      width: 430px;
+    }
+    .tm-content p.reg-date {
+      top: 278px;
+      left: auto;
+      right: 537px;
+      width: 125px;
+    }
+    .tm-content p.rec-num {
+      top: 347px;
+      left: auto;
+      right: 133px;
+      width: 395px;
+    }
+    .tm-content p.category {
+      top: 366px;
+      left: auto;
+      right: 325px;
+      width: 197px;
+    }
+    .tm-content p.nice {
+      top: 366px;
+      left: auto;
+      right: 80px;
+      width: 146px;
+    }
+    .tm-content p.order-num {
+      top: 278px;
+      left: auto;
+      right: 178px;
+      width: 278px;
+    }
+    .tm-content p.tm-description {
+      top: 554px;
+      left: auto;
+      right: 105px;
+      width: 580px;
+    }
+    .tm-content p.tm-conditions {
+      top: 795px;
+      left: auto;
+      right: 339px;
+      width: 265px;
+    }
+    .tm-content p.tm-owner {
+      top: 511px;
+      left: auto;
+      right: 103px;
+      width: 554px;
+    }
+    .tm-content p.address {
+      top: 665px;
+      left: auto;
+      right: 115px;
+      width: 536px;
+    }
+    .tm-content p.ar-name {
+      top: 392px;
+      left: auto;
+      right: 131px;
+      width: 396px;
+    }
+    .tm-content p.en-name {
+      top: 465px;
+      left: auto;
+      right: 142px;
+      width: 388px;
+    }
+
+    .qr-code {
+        width: 150px;
+        margin: 10px;
+        display: inline-block;
+        height: 150px;
+        padding: 4px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        position: absolute;
+        bottom: 20px;
+        left: 5px;
+        right: auto;
+    }
+
+    </style>
+
+<div class="tm-cover">
+    <div class="tm-cover-img">
+        <img src="https://fileintegration.saip.gov.sa/previewFile/1b40e231-d7fc-4d46-9d96-0869efe44624/IPRs4Patent/
+" alt="cover">
+    </div>
+    <div class="tm-content" th:each="l:${pdfRequest}">
+        <img class="tmlogo" th:src="${l.fileUrl}" alt="Image">
+
+        <p class="gentlemen">
+<!--            <span class="applicant-name" th:text="${l.applicantName}"></span>-->
+            <span th:text="${l.applicantName}"></span>
+        </p>
+        <p class="reg-date"><span th:text="${l.fillingDateHigri}"></span></p>
+
+        <p class="rec-num"><span th:text="${l.applicationRequestNumber}"></span></p>
+        <p class="category"><span th:text="${l.depositCertificateNiceClassificationName}"></span></p>
+        <p class="nice"><span th:text="${l.depositCertificateNiceClassificationVersionName}"></span></p>
+
+        <p class="order-num"><span th:text="${l.certificateRequestNumber}"></span></p>
+        <p class="tm-description"><span th:text="${l.markDescription}"></span></p>
+        <p class="tm-conditions"><span th:text="${l.certificateDateExpiry}"></span></p>
+        <p class="tm-owner"><span th:text="${l.tmOwner}"></span></p>
+        <p class="address">الرمز البريدي: <span th:text="${l.postalCode}"></span> ، اسم  المدينة: <span th:text="${l.cityName}"></span> ، اسم  الشارع: <span th:text="${l.streetName}"></span> ، رقم المبنى: <span th:text="${l.buildingNumber}"></span></p>
+        <p class="ar-name"><span th:text="${l.tmNameAr}"></span></p>
+        <p class="en-name"><span th:text="${l.tmNameEn}"></span></p>
+<!--        <img th:src="${l.qrCodeImageBase64}" class="qr-code" />-->
+    </div>
+
+</div>
+
+</body>
+</html>

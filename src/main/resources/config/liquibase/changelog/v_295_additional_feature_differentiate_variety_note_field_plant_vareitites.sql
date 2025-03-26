@@ -1,0 +1,1 @@
+ALTER TABLE application.plant_varieties_details ALTER COLUMN additional_feature_differentiate_variety_note TYPE text USING additional_feature_differentiate_variety_note::text;

@@ -1,0 +1,1 @@
+alter table application.protection_elements  add column is_english bool DEFAULT FALSE;

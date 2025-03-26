@@ -1,0 +1,1 @@
+ALTER TABLE application.opposition_revoke_licence_request ADD court_document_notes TEXT;

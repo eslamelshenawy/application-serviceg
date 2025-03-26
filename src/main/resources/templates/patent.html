@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+    <style>
+    /* Optional: Adjust the size of the iframe to fit your needs */
+    #pdfIframe {
+      width: 100%;
+      height: 500px;
+      border: none; /* Remove iframe border */
+    }
+
+    </style>
+</head><!--/head-->
+<body th:each="l:${pdfRequest}">
+<style type="text/css">
+
+    /*img:not(.static-images) {*/
+    /*    width: 200px;*/
+    /*    height: 200px;*/
+    /*}*/
+
+    @font-face {
+        font-family: "bukra";
+        src: url('src/main/resources/fonts/29ltbukraregular.ttf');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: "bukra";
+        src: url('src/main/resources/fonts/29ltbukrabold.ttf');
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+    }
+    * {
+          box-sizing: border-box;
+
+          clear: both;
+    }
+    body {
+          box-sizing: border-box;
+          margin: 0 auto;
+          position: relative !important;
+          direction: rtl;
+          background: #fff;
+          font:normal 13px/20px bukra,sans-serif;
+          color:#323232;
+          padding: 0 15px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 600;
+          font-family: 'bukra', sans-serif;
+          line-height: normal;
+        }
+        .f11 {
+          font-size: 11px !important;
+        }
+        .f12 {
+          font-size: 12px !important;
+        }
+        .f13 {
+          font-size: 12px !important;
+        }
+        .f14 {
+          font-size: 14px !important;
+        }
+        .f16 {
+          font-size: 16px !important;
+        }
+        .f24 {
+          font-size: 24px !important;
+        }
+        .mb1 {
+          margin-bottom: 10px;
+        }
+        .mb2 {
+          margin-bottom: 20px;
+        }
+        .mb3 {
+          margin-bottom: 30px;
+        }
+        .mb4 {
+          margin-bottom: 40px;
+        }
+        .mb5 {
+          margin-bottom: 50px;
+        }
+        .w50 {
+          width: 50%;
+        }
+        .w33 {
+          width: 33.333333%;
+        }
+        .w25 {
+          width: 25%;
+        }
+        .texcolor {
+          color: #007070;
+        }
+        .patent td,
+        th {
+          border: 1px solid #111;
+        }
+
+        .patent {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        .patent tbody tr:nth-child(even) {
+          background-color: #f6f6f6;
+        }
+
+        .table tr th,
+        .table tr td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+
+
+
+        .ftitlebold {
+          font-weight: 200;
+          padding-inline-start: 5px;
+          padding-inline-end: 5px;
+          font-size: medium;
+        }
+
+        .ftitlebold2 {
+          font-weight: 200;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+          font-size: medium;
+        }
+
+        .fdatabold {
+          font-weight: 300;
+          padding-inline-start: 10px;
+          padding-inline-end: 10px;
+          font-size: medium;
+        }
+        .cover {
+          margin: 0 auto;
+          max-width: 692px;
+          margin-bottom: 50px;
+          position: relative;
+          z-index: 0;
+          text-align: center;
+        }
+        .cover-img img {
+          width: 100%;
+        }
+        .cover-content {
+          position: absolute;
+          top: 190px;
+          left: 60px;
+          right: 60px;
+          z-index: 9;
+        }
+        .cover-content h1 {
+          color: #007070;
+          font-size: 28px;
+        }
+        .cover-content h2 {
+          color: #007070;
+          font-size: 24px;
+        }
+        .patname span {
+          color: #007070;
+          font-size: 14px;
+          line-height: 24px;
+          display: block;
+        }
+        .patdate span {
+          font-size: 12px;
+        }
+        .patdescription {
+          color: #007070;
+          font-size: 12px;
+          font-weight: 600;
+        }
+        .texcolor {
+          color: #007070;
+        }
+
+
+        .patdetails {
+          clear: both;
+          float: right;
+        }
+
+        .patdetails.w50,
+        .patdetails.w33,
+        .patdetails.w25 {
+          float: right;
+          padding-left: 15px;
+          clear: initial;
+        }
+        .patdetails.w50:nth-child(even),
+        .patdetails.w33:nth-child(even),
+        .patdetails.w25:nth-child(even) {
+          padding-right: 15px;
+          padding-left: 0;
+        }
+        .patdetails h4 {
+          color: #007070;
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+        .patdetails p {
+          margin-bottom: 15px;
+        }
+        .pattitle {
+          color: #007070;
+          margin-bottom: 15px;
+          margin-top: 15px;
+          text-decoration: underline;
+          font-size: 18px;
+          text-align: center;
+        }
+
+
+
+
+        .pat-img {
+          clear: both;
+          text-align: center;
+        }
+        .pat-img img {
+          max-width: 100%;
+        }
+        .pat-img.w50,
+        .pat-img.w33,
+        .pat-img.w25 {
+          float: right;
+          padding-left: 15px;
+          clear: initial;
+        }
+        .pat-img.w50:nth-child(even),
+        .pat-img.w33:nth-child(even),
+        .pat-img.w25:nth-child(even) {
+          padding-right: 15px;
+          padding-left: 0;
+        }
+        .bg-color {
+            background: #696969;
+            color: #fff;
+        }
+        .bg-color2 {
+            background: #c0c0c0;
+            color: #000;
+            font-weight: 600;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .patlist ul{
+            display: inline-block;
+        }
+        .patlist h4 {
+          color: #007070;
+          margin-bottom: 15px;
+          margin-top: 15px;
+        }
+        .patlist span {
+          font-weight: 600;
+          color: #007070;
+        }
+        .patlist p {
+          margin-bottom: 15px;
+        }
+        .patlist img{
+            float: left;
+            max-width: 150px;
+        }
+
+</style>
+<div class="cover">
+    <div class="cover-img">
+        <img src="https://fileintegration.saip.gov.sa/previewFile/6157a279-735f-4a83-8e87-3f8d7c92c9a4/IPRs4Patent/"
+             alt="cover" class="static-images">
+    </div>
+    <div class="cover-content">
+        <h1>براءة الاختراع</h1>
+        <p class="f11 mb4">البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة أو
+            إمكانية استخدام الغير للاختراع. ومقابل ذلك الحق، يتيح مالك البراءة للجمهور المعلومات التقنية الخاصة
+            بالاختراع في وثيقة البراءة المنشورة البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق
+            البتّ في طريقة الخاصة بالاختراع في وثيقة البراءة المنشورة.</p>
+
+        <p class="patname mb3">
+            <span th:text="${l.titleAr}"></span>
+            <span th:text="${l.titleEn}"></span></p>
+        <p class="patnumber">براءة الاختراع رقم: <span th:text="${l.applicationNumber}"></span></p>
+        <p class="patdate">
+            <span th:text="${l.grantDateHijri}" بتاريخ></span>
+            <span th:text="${l.grantDate}" الموافق></span>
+        </p>
+        <h4>عن الاختراع المسمى</h4>
+        <p class="patdescription">البراءة حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة لمالكها حق البتّ في
+            طريقة البراءة حق وبشكل عام، تكفل البراءة لمالكها حق البتّ في طريقة</p>
+        <p class="f12">البراءة حق استئثاري يمنح نظير اختراع حق استئثاري يمنح نظير اختراع. وبشكل عام، تكفل البراءة
+            لمالكها حق البتّ في طريقة</p>
+    </div>
+
+</div>
+<br>
+<div dir="rtl">
+    <table class="table patent mb5">
+        <thead>
+        <tr>
+            <th colspan="2" class="w33">الهيئة السعودية للملكية الفكرية</th>
+            <th colspan="2" rowspan="2" class="w33"><span class="texcolor f24">براءة اختراع</span></th>
+            <th colspan="2">تاريخ المنح: <span th:text="${l.grantDateHijri}"></span></th>
+        </tr>
+        <tr>
+            <th colspan="2">رقم البراءة: <span th:text="${l.applicationNumber}"></span></th>
+            <th colspan="2">الموافق: <span th:text="${l.grantDate}"></span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3" class="w50">رقم الطلب: <span th:text="${l.applicationNumber}"></span></td>
+            <td colspan="3" class="w50">رقم الطلب الدولي: <span th:text="${l.pctApplicationNo}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="w50">تاريخ دخول المرحلة الوطنية: <span th:text="${l.filingDateHiGry}"></span></td>
+            <td colspan="3" class="w50">تاريخ ايداع الطلب الدولى: <span th:text="${l.filingDateGr}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="w50">الموافق: <span th:text="${l.filingDate}"></span></td>
+            <td colspan="3" class="w50">رقم النشر الدولى: <span th:text="${l.publishNo}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="w50">المخترع: <span
+                    th:text="${#strings.arrayJoin(l.inventor.toArray(), ', ')}"></span></td>
+            <td colspan="3" class="w50">تاريخ النشر الدولى: <span th:text="${l.internationalPublicationDate}"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="w50">مالك البراءة: <span th:text="${l.tmOwner}"></span></td>
+            <td colspan="3" class="w50">التصنيف الدولى: <span th:text="${l.ipcNumber}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="w50">عنوانه: <span th:text="${l.address}"></span></td>
+            <td colspan="3" class="w50">الفاحص: <span
+                    th:text="${#strings.arrayJoin(l.checkerNames.toArray(), ', ')}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="w50">جنسيته: <span th:text="${l.nationality}"></span></td>
+            <td colspan="3" class="w50">الوكيل: <span th:text="${l.agentName}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+<div dir="rtl">
+    <div class="patdetails">
+        <h4>اسم الاختراع</h4>
+        <p th:text="${l.titleAr}"></p>
+    </div>
+    <div class="patdetails">
+        <h4>الملخص</h4>
+        <p th:utext="${l.summary}"></p>
+
+    </div>
+    <div dir="rtl" class="patdetails">
+        <h4>عناصر الحماية</h4>
+        <p th:utext="${l.claimsArabic}"></p>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="patdetails" dir="rtl">
+    <h1>الوصف الكامل</h1>
+    <p th:utext="${l.descriptionSpecificationArabic}"></p>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div class="patdetails" dir="rtl">
+    <h1>الرسومات</h1>
+<!--    <div id="pdfImages">-->
+<!--        <div th:each="image : ${l.imagesExtracted}">-->
+<!--            <img th:src="'data:image/png;base64,'+${image}"/>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div dir="rtl" class="patdetails">
+        <h4>الرسومات</h4>
+        <p th:utext="${l.graphics}"></p>
+    </div>
+
+</div>
+
+<div style="height:3px">
+</div>
+<div class="cover">
+    <div class="cover-img">
+        <img src="https://fileintegration.saip.gov.sa/previewFile/20f155f7-4379-48ce-b715-10d8baea05ca/IPRs4Patent/"
+             alt="cover" class="static-images">
+    </div>
+    <div class="cover-content">
+        <h2>مدة سريان هذه البراءة عشرون سنة من تاريخ إيداع الطلب</h2>
+        <p class="f11 mb5">وذلك بشرط تسديد المقابل المالي السنوي للبراءة وعدم بطلانها او سقوطها لمخالفتها لاي من احكام
+            نظام براءات الاختراع والتصميمات التخطيطية للدارات المتكاملة والاصناف النباتية والنماذج الصناعية او لائحته
+            التنفيذية.</p>
+        <h3>صادرة عن</h3>
+        <h3>الهيئة السعودية للملكية الفكرية</h3>
+        <p>ص ب 6531 , الرياض 13321 , المملكة العربية السعودية</p>
+        <p class="patdescription">SAIP@SAIP.GOV.SA</p>
+    </div>
+</div>
+</body>
+</html>

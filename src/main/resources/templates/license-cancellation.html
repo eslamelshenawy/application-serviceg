@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    <link rel="shortcut icon" href="#">
+
+</head>
+<!--/head-->
+
+<body>
+
+
+
+<style type="text/css">
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    @font-face {
+        font-family: "Dubai";
+        src: url('fonts/Dubai-Regular.ttf');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: "Dubai";
+        src: url('fonts/Dubai-Bold.ttf');
+        font-weight: 600;
+        font-display: swap;
+        font-style: normal;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    div {
+        clear: both;
+    }
+
+    body {
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative !important;
+        direction: rtl;
+        background: #fff;
+        font: normal 13px/20px Dubai, sans-serif;
+        color: #323232;
+        padding: 0 15px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        font-family: 'Dubai', sans-serif;
+        line-height: normal;
+    }
+
+    .f11 {
+        font-size: 11px !important;
+    }
+
+    .f12 {
+        font-size: 12px !important;
+    }
+
+    .f13 {
+        font-size: 12px !important;
+    }
+
+    .f14 {
+        font-size: 14px !important;
+    }
+
+    .f16 {
+        font-size: 16px !important;
+    }
+
+    .f24 {
+        font-size: 24px !important;
+    }
+
+    .mb1 {
+        margin-bottom: 10px;
+    }
+
+    .mb2 {
+        margin-bottom: 20px;
+    }
+
+    .mb3 {
+        margin-bottom: 30px;
+    }
+
+    .mb4 {
+        margin-bottom: 40px;
+    }
+
+    .mb5 {
+        margin-bottom: 50px;
+    }
+
+    .w50 {
+        width: 50%;
+    }
+
+    .w33 {
+        width: 33.333333%;
+    }
+
+    .w25 {
+        width: 25%;
+    }
+
+    .texcolor {
+        color: #007070;
+    }
+
+    .patent td,
+    th {
+        border: 1px solid #111;
+    }
+
+    .noborder {
+        border: 0 !important;
+    }
+
+    .patent {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .patent tbody tr:nth-child(even) {
+        background-color: #f6f6f6;
+    }
+
+    .table tr th,
+    .table tr td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+
+
+
+    .ftitlebold {
+        font-weight: 200;
+        padding-inline-start: 5px;
+        padding-inline-end: 5px;
+        font-size: medium;
+    }
+
+    .ftitlebold2 {
+        font-weight: 200;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: medium;
+    }
+
+    .fdatabold {
+        font-weight: 300;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        font-size: medium;
+    }
+
+    .cover {
+        margin: 0 auto;
+        max-width: 692px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 0;
+        text-align: center;
+    }
+
+    .cover-img img {
+        width: 692px;
+    }
+
+    .cover-content {
+        position: absolute;
+        top: 150px;
+        left: 60px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .cover-content h1 {
+        color: #007070;
+        font-size: 28px;
+    }
+
+    .cover-content h2 {
+        color: #007070;
+        font-size: 24px;
+    }
+
+    .patname span {
+        color: #007070;
+        font-size: 14px;
+        line-height: 24px;
+        display: block;
+    }
+
+    .patdate span {
+        font-size: 12px;
+    }
+
+    .patdescription {
+        color: #007070;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .texcolor {
+        color: #007070;
+    }
+
+
+    .patdetails {
+        clear: both;
+        float: right;
+    }
+
+    .patdetails.w50,
+    .patdetails.w33,
+    .patdetails.w25 {
+        float: right;
+        padding-left: 15px;
+        clear: initial;
+    }
+
+    .patdetails.w50:nth-child(even),
+    .patdetails.w33:nth-child(even),
+    .patdetails.w25:nth-child(even) {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .patdetails h4 {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .patdetails p {
+        margin-bottom: 15px;
+    }
+
+    .pattitle {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        text-decoration: underline;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+
+
+    .pat-img {
+        clear: both;
+        text-align: center;
+    }
+
+    .pat-img img {
+        max-width: 100%;
+    }
+
+    .pat-img.w50,
+    .pat-img.w33,
+    .pat-img.w25 {
+        float: right;
+        padding-left: 15px;
+        clear: initial;
+    }
+
+    .pat-img.w50:nth-child(even),
+    .pat-img.w33:nth-child(even),
+    .pat-img.w25:nth-child(even) {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+
+    .bg-color {
+        background: #696969;
+        color: #fff;
+    }
+
+    .bg-color2 {
+        background: #c0c0c0;
+        color: #000;
+        font-weight: 600;
+    }
+
+    .text-center {
+        text-align: center !important;
+    }
+
+    .text-left {
+        text-align: left !important;
+    }
+
+    .underline {
+        text-decoration: underline !important;
+    }
+
+    .text-right {
+        text-align: right !important;
+    }
+
+    .patlist ul {
+        display: inline-block;
+    }
+
+    .patlist h4 {
+        color: #007070;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .patlist span {
+        font-weight: 600;
+        color: #007070;
+    }
+
+    .patlist p {
+        margin-bottom: 15px;
+    }
+
+    .patlist img {
+        float: left;
+        max-width: 150px;
+    }
+
+    .cover-date {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+    }
+
+    .cover-date ul {
+        list-style: none;
+        text-align: right;
+        font-size: 14px;
+        padding: 0 15px;
+        line-height: 24px;
+    }
+
+    .cover-date ul span {
+        list-style: none;
+        font-weight: 600;
+        color: #007070;
+    }
+
+    .tm-cover {
+        margin: 0 auto;
+        max-width: 692px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 0;
+        text-align: center;
+    }
+
+    .tm-cover-img img {
+        width: 100%;
+    }
+
+    .tm-cover-content {
+        position: absolute;
+        top: 150px;
+        left: 60px;
+        right: 60px;
+        z-index: 9;
+    }
+
+    .tm-cover-content h1 {
+        color: #007070;
+        font-size: 28px;
+    }
+
+    .tm-cover-content h2 {
+        color: #007070;
+        font-size: 24px;
+    }
+
+    .tm-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+    }
+
+    .tm-content .tmlogo {
+        position: absolute;
+        top: 360px;
+        left: 35px;
+        right: auto;
+        z-index: 9;
+        width: 120px;
+        height: 120px;
+    }
+
+    .tm-content p {
+        position: absolute;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 23px;
+        margin: 0;
+        z-index: 9;
+        text-align: right;
+        padding: 0 10px;
+    }
+
+    .tm-content p.owner-name {
+        top: 209px;
+        left: auto;
+        right: 71px;
+        width: 430px;
+    }
+
+    .tm-content p.reg-date {
+        top: 278px;
+        left: auto;
+        right: 537px;
+        width: 125px;
+    }
+    .tm-content p.TM-num {
+        top: 347px;
+        left: auto;
+        right: 103px;
+        width: 395px;
+    }
+
+    .tm-content p.category {
+        top: 366px;
+        left: auto;
+        right: 103px;
+        width: 395px;
+    }
+
+    .tm-content p.nice {
+        top: 366px;
+        left: auto;
+        right: 110px;
+        width: 146px;
+    }
+
+    .tm-content p.order-num {
+        top: 278px;
+        left: auto;
+        right: 178px;
+        width: 278px;
+    }
+
+    .tm-content p.tm-description {
+        top: 554px;
+        left: auto;
+        right: 105px;
+        width: 580px;
+    }
+
+    .tm-content p.tm-conditions {
+        top: 342px;
+        left: auto;
+        right: 103px;
+        width: 395px;
+    }
+
+    .tm-content p.tm-owner {
+        top: 393px;
+        left: auto;
+        right: 103px;
+        width: 440px;
+    }
+    .tm-content p.tm-classification {
+        top: 370px;
+        left: auto;
+        right: 103px;
+        width: 440px;
+    }
+    .tm-content p.licensee {
+        top: 462px;
+        left: auto;
+        right: 98px;
+        width: 440px;
+    }
+    .tm-content p.license-annulment-date {
+        top: 533px;
+        left: auto;
+        right: 138px;
+        width: 520px;
+    }
+    .tm-content p.publication-date {
+        top: 556px;
+        left: auto;
+        right: 165px;
+        width: 490px;
+    }
+    .tm-content p.cancellation-date {
+        top: 530px;
+        left: auto;
+        right: 165px;
+        width: 490px;
+    }
+    .tm-content p.address {
+        top: 665px;
+        left: auto;
+        right: 115px;
+        width: 536px;
+    }
+
+    .tm-content p.ar-name {
+        top: 392px;
+        left: auto;
+        right: 131px;
+        width: 396px;
+    }
+
+    .tm-content p.en-name {
+        top: 465px;
+        left: auto;
+        right: 142px;
+        width: 388px;
+    }
+</style>
+
+
+
+<div class="tm-cover">
+    <div class="tm-cover-img">
+        <img src="https://fileintegration.saip.gov.sa/previewFile/03c4f84d-0f23-43a4-9f08-a45a91726d6f/IPRs4Patent/" alt="cover">
+    </div>
+    <div class="tm-content">
+        <img class="tmlogo" th:src="@{${tmImage}}" alt="">
+
+        <p class="owner-name"><span th:text="${applicantName}"></span></p>
+        <p class="order-num"><span th:text="${cancellationLicenseRequestNumber}"></span></p>
+        <p class="reg-date"><span th:text="${createdDate}"></span>هـ</p>
+
+        <p class="TM-num"><span th:text="${applicationNumber}"></span></p>
+
+        <p class="tm-classification r"><span th:text="${classificationName}"></span></p>
+        <p class="tm-owner"><span th:text="${applicantName}"></span></p>
+        <p class="licensee"><span th:text="${licenseName}"></span></p>
+
+        <p class="cancellation-date"><span th:text="${licenseCancellationDate}"></span>هـ</p>
+        <p class="publication-date"><span th:text="${publicationDate}"></span>هـ</p>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+ALTER TABLE application.applications_info add column if not exists process_request_id int8 NULL;

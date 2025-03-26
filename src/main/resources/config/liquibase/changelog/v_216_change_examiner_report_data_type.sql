@@ -1,0 +1,2 @@
+ALTER TABLE application.substantive_examination_reports
+ALTER COLUMN examiner_report TYPE TEXT;
